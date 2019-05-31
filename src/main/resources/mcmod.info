@@ -1,0 +1,16 @@
+[
+{
+  "modid": "litecraftcore",
+  "name": "Litecraftcore",
+  "description": "Core mod for Litecraft Modpack",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Miha_77"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

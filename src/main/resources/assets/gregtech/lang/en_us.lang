@@ -1,0 +1,78 @@
+#Avaritia Materials
+material.infinity=Infinity
+material.infinity_catalyst=Infinity Catalyst
+material.cosmic_neutronium=Cosmic Neutronium
+
+#Simply Jetpacks 2 Material
+material.dark_soularium=Dark Soularium
+
+#Vanilla Materials
+material.soul_sand=Soul Sand
+
+#PlusTiC Materials
+material.alumite=Alumite
+
+#ProjectRed material
+material.electrotine=Electrotine
+material.electrotine_alloy=Electrotine Alloy
+
+#Tconstruct Materials
+material.ardite=Ardite
+material.alubrass=Aluminum Brass
+material.manyullyn=Manyullyn
+material.knightslime=Knightslime
+material.pigiron=Pig Iron
+
+#Thermal Foundation Material
+material.signalum=Signalum
+material.lumium=Lumium
+
+#Galacticraft Materials
+material.desh=Desh
+material.meteoric_iron=Meteoric Iron
+
+#Ender IO Materials
+material.redstone_alloy=Redstone Alloy
+material.conductive_iron=Conductive Iron
+material.energetic_alloy=Energetic Alloy
+material.pulsating_iron=Pulsating Iron
+material.vibrant_alloy=Vibrant Alloy
+
+material.dark_steel=Dark Steel
+material.electrical_steel=Electrical Steel
+material.end_steel=End Steel
+material.soularium=Soularium
+material.construction_alloy=Construction Alloy
+
+#Alloys
+metaitem.heavy_duty_alloy_ingot_t1.name=Heavy Duty Alloy Ingot T1
+metaitem.heavy_duty_alloy_ingot_t2.name=Heavy Duty Alloy Ingot T2
+metaitem.heavy_duty_alloy_ingot_t3.name=Heavy Duty Alloy Ingot T3
+metaitem.heavy_duty_alloy_ingot_t4.name=Heavy Duty Alloy Ingot T4
+metaitem.heavy_duty_alloy_ingot_t5.name=Heavy Duty Alloy Ingot T5
+metaitem.heavy_duty_alloy_ingot_t6.name=Heavy Duty Alloy Ingot T6
+metaitem.raw_sdhc_alloy.name=Raw "SDHC-120" Alloy
+
+#core
+metaitem.core_storage_component.name=Core Storage Component
+metaitem.core_fluid_storage_component.name=Core Fluid Storage Component
+metaitem.core_spatial_storage_component.name=Core Spatial Storage Component
+
+#printed core
+metaitem.core_printed_storage_component.name=Printed Core Storage Component
+metaitem.core_printed_fluid_storage_component.name=Printed Core Fluid Storage Component
+metaitem.core_printed_spatial_storage_component.name=Printed Core Spatial Storage Component
+
+#Processors
+metaitem.processor_fluid_printed.name=Printed Fluid Processor
+metaitem.processor_fluid.name=Fluid Processor
+
+#Circuits
+metaitem.ae_circuit.name=Applied Energistics Circuit
+metaitem.adv_ae_circuit.name=Advanced Applied Energistics Circuit
+metaitem.fluid_circuit.name=Fluid Circuit
+
+#Misc 
+metaitem.cover_interface.name=Interface
+metaitem.ae_wafer.name=Applied Energistics Wafer
+metaitem.ae_chip.name=Applied Energistics Chip

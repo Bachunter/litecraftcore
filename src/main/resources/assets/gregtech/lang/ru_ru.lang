@@ -1,0 +1,57 @@
+#Simply Jetpacks 2 Materials
+material.dark_soularium=Тёмный солуарий
+
+#Vanilla Materials
+material.soul_sand=Песок душ
+
+#PlusTiC Materials
+material.alumite=Алюмит
+
+#Tconstruct Materials
+material.ardite=Ардит
+material.alubrass=Алюминевая латунь
+material.manyullyn=Маньюлин
+material.knightslime=Слизесталь
+
+#Thermal Foundation Material
+material.signalum=Синаловый сплав
+material.lumium=Люмиум
+
+#Ender IO Materials
+material.redstone_alloy=Сплав Красного камня
+material.conductive_iron=Проводящее железо
+material.energetic_alloy=Энергетический сплав
+material.pulsating_iron=Пульсирующее железо
+material.vibrant_alloy=Вибрирующий сплав
+
+material.dark_steel=Тёмная сталь
+material.electrical_steel=Наэлектризованная сталь
+material.end_steel=Сталь края
+material.soularium=Соуларий
+material.construction_alloy=Конструкционный сплав
+
+#Alloys
+metaitem.heavy_duty_alloy_ingot_t1.name=Слиток сверхпрочного сплава T1
+metaitem.heavy_duty_alloy_ingot_t2.name=Слиток сверхпрочного сплава T2
+metaitem.heavy_duty_alloy_ingot_t3.name=Слиток сверхпрочного сплава T3
+metaitem.heavy_duty_alloy_ingot_t4.name=Слиток сверхпрочного сплава T4
+metaitem.heavy_duty_alloy_ingot_t5.name=Слиток сверхпрочного сплава T5
+metaitem.heavy_duty_alloy_ingot_t6.name=Слиток сверхпрочного сплава T6
+metaitem.raw_sdhc_alloy.name=Несжатый сплав "SDHC-120"
+
+#core
+metaitem.core_storage_component.name=Ядро компонента хранения
+metaitem.core_fluid_storage_component.name=Ядро жидкостного компонента хранения
+metaitem.core_spatial_storage_component.name=Ядро пространственного компонента хранения
+
+#printed core
+metaitem.core_printed_storage_component.name=Отпечатанное ядро компонента хранения
+metaitem.core_printed_fluid_storage_component.name=Отпечатанное ядро жидкостного компонента хранения
+metaitem.core_printed_spatial_storage_component.name=Отпечатанное ядро пространственного компонента хранения
+
+#Processors
+metaitem.processor_fluid_printed.name=Отпечатанный контур жидкостного процессора
+metaitem.processor_fluid.name=Жидкостный процессор
+
+#Misc 
+metaitem.cover_interface.name=Интерфейс

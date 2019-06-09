@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "gregetch:blocks/construction_alloy_bars",
-        "bars": "gregetch:blocks/construction_alloy_bars",
-        "edge": "gregetch:blocks/construction_alloy_bars"
+        "particle": "litecraftcore:blocks/construction_alloy_bars",
+        "bars": "litecraftcore:blocks/construction_alloy_bars",
+        "edge": "litecraftcore:blocks/construction_alloy_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

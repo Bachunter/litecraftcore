@@ -2,6 +2,7 @@ package litecraftcore.proxy;
 
 import gregtech.api.util.GTLog;
 import litecraftcore.LitecraftCore;
+import litecraftcore.blocks.LCBlocks;
 import litecraftcore.gthandler.recipes.CraftingRecipeLoader;
 import litecraftcore.gthandler.recipes.LCMachineRemoveRecipes;
 import litecraftcore.gthandler.recipes.MachineRecipeLoader;
@@ -33,7 +34,9 @@ public class CommonProxy {
     }
 
 
-    public void preInit(FMLPreInitializationEvent event){}
+    public void preInit(FMLPreInitializationEvent event){
+        LCBlocks.init();
+    }
 
     public void init(FMLInitializationEvent event) {}
 

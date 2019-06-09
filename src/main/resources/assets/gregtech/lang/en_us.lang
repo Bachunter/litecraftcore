@@ -72,7 +72,14 @@ metaitem.ae_circuit.name=Applied Energistics Circuit
 metaitem.adv_ae_circuit.name=Advanced Applied Energistics Circuit
 metaitem.fluid_circuit.name=Fluid Circuit
 
+#Bars
+tile.construction_alloy_bars.name=Construction Alloy Bars
+tile.soularium_bars.name=Soularium Bars
+tile.stainless_steel_bars.name=Stainless Steel Bars
+tile.titanium_bars.name=Titanium Bars
+
 #Misc 
 metaitem.cover_interface.name=Interface
 metaitem.ae_wafer.name=Applied Energistics Wafer
 metaitem.ae_chip.name=Applied Energistics Chip
+metaitem.charged_certus_quartz_dust.name=Charged Certus Quartz Dust

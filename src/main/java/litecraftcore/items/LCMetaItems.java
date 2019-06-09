@@ -38,6 +38,8 @@ public class LCMetaItems {
     public static MetaItem<?>.MetaValueItem AE_WAFER;
     public static MetaItem<?>.MetaValueItem AE_CHIP;
 
+    public static MetaItem<?>.MetaValueItem charged_certus_quartz_dust;
+
     public static void init() {
         LCMetaItem item = new LCMetaItem();
         item.setRegistryName("lc_meta_item");

@@ -1,5 +1,6 @@
 package litecraftcore.proxy;
 
+import litecraftcore.blocks.LCBlocks;
 import litecraftcore.items.LCMetaItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -20,6 +21,7 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public void registerModels(){
         LCMetaItems.registerModels();
+        LCBlocks.registerModels();
     }
 
     @Override

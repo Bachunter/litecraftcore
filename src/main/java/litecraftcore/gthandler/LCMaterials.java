@@ -1,7 +1,6 @@
 package litecraftcore.gthandler;
 
 import gregtech.api.GTValues;
-import gregtech.api.unification.Element;
 import gregtech.api.unification.material.IMaterialHandler;
 import gregtech.api.unification.material.MaterialIconSet;
 import gregtech.api.unification.material.type.DustMaterial;
@@ -14,8 +13,7 @@ import static com.google.common.collect.ImmutableList.of;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.type.DustMaterial.MatFlags.*;
-import static gregtech.api.unification.material.type.GemMaterial.MatFlags.GENERATE_LENSE;
-import static gregtech.api.unification.material.type.GemMaterial.MatFlags.HIGH_SIFTER_OUTPUT;
+import static gregtech.api.unification.material.type.GemMaterial.MatFlags.*;
 import static gregtech.api.unification.material.type.IngotMaterial.MatFlags.*;
 import static gregtech.api.unification.material.type.Material.MatFlags.*;
 import static gregtech.api.unification.material.type.SolidMaterial.MatFlags.*;
@@ -60,11 +58,11 @@ public class LCMaterials {
     public static IngotMaterial PulsatingIron =  new IngotMaterial(808, "pulsating_iron", 0x749D7D, MaterialIconSet.METALLIC, 2, of(new MaterialStack(Iron, 1), new MaterialStack(Chrome, 1), new MaterialStack(Alumite, 1), new MaterialStack(EnderPearl, 1)), GENERATE_PLATE | GENERATE_FINE_WIRE, null, 3500);
     public static IngotMaterial VibrantAlloy = new IngotMaterial(809, "vibrant_alloy", 0xBAC63F, MaterialIconSet.SHINY, 3, of(new MaterialStack(EnergeticAlloy, 2), new MaterialStack(Platinum, 1), new MaterialStack(EnderPearl, 1)), GENERATE_PLATE | GENERATE_FINE_WIRE, null, 4000);
 
-    public static IngotMaterial ConstructionAlloy = new IngotMaterial(810, "construction_alloy", 0x706E70, MaterialIconSet.DULL, 1, of(new MaterialStack(TinAlloy, 8), new MaterialStack(Silicon, 1)), DECOMPOSITION_BY_CENTRIFUGING | GENERATE_PLATE, null);
+    public static IngotMaterial ConstructionAlloy = new IngotMaterial(810, "construction_alloy", 0x706E70, MaterialIconSet.DULL, 1, of(new MaterialStack(TinAlloy, 8), new MaterialStack(Silicon, 1)), DECOMPOSITION_BY_CENTRIFUGING | GENERATE_PLATE | GENERATE_ROD, null);
     public static IngotMaterial DarkSteel = new IngotMaterial(811, "dark_steel", 0x2B2B2B, MaterialIconSet.DULL, 2, of(new MaterialStack(Steel, 5), new MaterialStack(BlackBronze, 2), new MaterialStack(Vanadium, 1), new MaterialStack(Obsidian, 1)), GENERATE_PLATE | GENERATE_DENSE | GENERATE_ROD | GENERATE_LONG_ROD, null, 2000);
-    public static IngotMaterial ElectricalSteel = new IngotMaterial(812, "electrical_steel", 0x7F7F7F, MaterialIconSet.SHINY, 2, of(new MaterialStack(Steel, 7), new MaterialStack(Silicon, 1), new MaterialStack(Neodymium, 1)), GENERATE_PLATE | GENERATE_DENSE, null, 2000);
-    public static IngotMaterial EndSteel = new IngotMaterial(813, "end_steel", 0xFCFDCA, MaterialIconSet.SHINY, 2, of(new MaterialStack(Steel, 5), new MaterialStack(Endstone, 1)), GENERATE_PLATE | GENERATE_DENSE, null, 2000);
-    public static IngotMaterial Soularium = new IngotMaterial(814, "soularium", 0x6B5E4F, MaterialIconSet.DULL, 2, of(new MaterialStack(Iron, 4), new MaterialStack(Gold, 1), new MaterialStack(SoulSand, 1)), GENERATE_PLATE, null,2000);
+    public static IngotMaterial ElectricalSteel = new IngotMaterial(812, "electrical_steel", 0x7F7F7F, MaterialIconSet.SHINY, 2, of(new MaterialStack(Steel, 7), new MaterialStack(Silicon, 1), new MaterialStack(Neodymium, 1)), GENERATE_PLATE | GENERATE_DENSE| GENERATE_ROD, null, 2000);
+    public static IngotMaterial EndSteel = new IngotMaterial(813, "end_steel", 0xFCFDCA, MaterialIconSet.SHINY, 3, of(new MaterialStack(Endstone, 1), new MaterialStack(Obsidian, 1), new MaterialStack(DarkSteel, 1)), GENERATE_PLATE | GENERATE_DENSE | GENERATE_ROD, null, 5000);
+    public static IngotMaterial Soularium = new IngotMaterial(814, "soularium", 0x6B5E4F, MaterialIconSet.DULL, 2, of(new MaterialStack(Iron, 4), new MaterialStack(Gold, 1), new MaterialStack(SoulSand, 1)), GENERATE_PLATE | GENERATE_ROD, null,1000);
 
     /**
      * Simply Jetpacks Material
@@ -92,9 +90,9 @@ public class LCMaterials {
      * Avaritia Materials
      */
 
-    public static IngotMaterial CosmicNeutronium = new IngotMaterial(822, "cosmic_neutronium", 0x1C1C1C, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | GENERATE_PLATE | GENERATE_DENSE, null, 9000);
-    public static IngotMaterial Infinity         = new IngotMaterial(823, "infinity",          0xFFF0EA, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | GENERATE_PLATE | GENERATE_DENSE, null, 7200);
-    public static IngotMaterial InfinityCatalyst = new IngotMaterial(824, "infinity_catalyst", 0xFEEDC5, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | GENERATE_PLATE | GENERATE_DENSE, null, 8000);
+    public static IngotMaterial CosmicNeutronium = new IngotMaterial(822, "cosmic_neutronium", 0x1C1C1C, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | GENERATE_PLATE | GENERATE_DENSE | GENERATE_ROD, null, 9000);
+    public static IngotMaterial Infinity         = new IngotMaterial(823, "infinity",          0xFFF0EA, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | GENERATE_PLATE | GENERATE_DENSE | GENERATE_ROD, null, 7200);
+    public static IngotMaterial InfinityCatalyst = new IngotMaterial(824, "infinity_catalyst", 0xFEEDC5, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | GENERATE_PLATE | GENERATE_DENSE | GENERATE_ROD, null, 8000);
 
     static {
         RedstoneAlloy.setCableProperties(GTValues.V[ULV], 2, 0);

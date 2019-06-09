@@ -58,6 +58,8 @@ public class LCMetaItem extends MaterialMetaItem {
         FLUID_CIRCUIT = addItem(18, "fluid_circuit");
         AE_WAFER = addItem(19, "ae_wafer");
         AE_CHIP = addItem(20, "ae_chip");
+
+        charged_certus_quartz_dust = addItem(21, "charged_certus_quartz_dust");
     }
 
     public void registerRecipes(){
@@ -87,6 +89,13 @@ public class LCMetaItem extends MaterialMetaItem {
                 .inputs(LCMetaItems.core_printed_spatial_storage_component.getStackForm(), ModHandler.getModItem("appliedenergistics2", "material", 1, 20))
                 .fluidInputs(Materials.Redstone.getFluid(144))
                 .outputs(LCMetaItems.core_spatial_storage_component.getStackForm())
+                .buildAndRegister();
+
+        RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
+                .duration(100).EUt(4)
+                //Charged Certus Quartz
+                .inputs(ModHandler.getModItem(ModNameValues.AppliedEnergistics, "material", 1, 1))
+                .outputs(LCMetaItems.charged_certus_quartz_dust.getStackForm(1))
                 .buildAndRegister();
 
         RecipeMaps.FORMING_PRESS_RECIPES.recipeBuilder()

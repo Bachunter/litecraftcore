@@ -7,9 +7,7 @@ import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.material.type.MarkerMaterial;
 import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.items.MetaItems;
 import litecraftcore.gthandler.LCMaterials;
 import litecraftcore.gthandler.ModNameValues;
@@ -17,7 +15,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.Mod;
 
 public class MachineRecipeLoader {
     public static void init() {

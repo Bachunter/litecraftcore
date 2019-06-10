@@ -19,6 +19,14 @@ import net.minecraftforge.fml.common.Loader;
 public class MachineRecipeLoader {
     public static void init() {
 
+        RecipeMaps.BLAST_RECIPES.recipeBuilder()
+                .duration(600).EUt(120)
+                .input(OrePrefix.ingot, Materials.Cobalt)
+                .input(OrePrefix.ingot, LCMaterials.Ardite)
+                .outputs(OreDictUnifier.get(OrePrefix.ingotHot, LCMaterials.Manyullyn, 2))
+                .blastFurnaceTemp(LCMaterials.Manyullyn.blastFurnaceTemperature)
+                .buildAndRegister();
+
         RecipeMaps.CENTRIFUGE_RECIPES.recipeBuilder()
                 .duration(200).EUt(80)
                 .inputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.SoulSand))
@@ -28,24 +36,10 @@ public class MachineRecipeLoader {
                 .fluidOutputs(Materials.Oil.getFluid(80))
                 .buildAndRegister();
 
-        RecipeMaps.BLAST_RECIPES.recipeBuilder()
-                .duration(500).EUt(480)
-                .input(OrePrefix.ingot, Materials.Cobalt)
-                .input(OrePrefix.ingot, LCMaterials.Ardite)
-                .outputs(OreDictUnifier.get(OrePrefix.ingotHot, LCMaterials.Manyullyn, 2))
-                .blastFurnaceTemp(LCMaterials.Manyullyn.blastFurnaceTemperature)
-                .buildAndRegister();
-
         RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
                 .duration(100).EUt(4)
                 .inputs(new ItemStack(Blocks.SOUL_SAND))
                 .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.SoulSand))
-                .buildAndRegister();
-
-        RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
-                .duration(100).EUt(4)
-                .inputs(ModHandler.getModItem("biomesoplenty", "flesh", 1))
-                .chancedOutput(new ItemStack(Items.ROTTEN_FLESH, 1), 1000)
                 .buildAndRegister();
 
         RecipeMaps.MIXER_RECIPES.recipeBuilder()
@@ -71,6 +65,13 @@ public class MachineRecipeLoader {
                 .input(OrePrefix.dust, Materials.Lanthanum)
                 .input(OrePrefix.dust, Materials.Lutetium)
                 .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.Lumium, 6))
+                .buildAndRegister();
+
+
+        RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
+                .duration(100).EUt(4)
+                .inputs(ModHandler.getModItem("biomesoplenty", "flesh", 1))
+                .chancedOutput(new ItemStack(Items.ROTTEN_FLESH, 1), 1000)
                 .buildAndRegister();
 
         if(Loader.isModLoaded(ModNameValues.SimplyJetpacks) && Loader.isModLoaded(ModNameValues.GregicAdditions)) {

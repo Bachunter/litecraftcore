@@ -3,12 +3,28 @@ package litecraftcore.gthandler.recipes;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.ore.OrePrefix;
+import litecraftcore.blocks.LCBlocks;
 import litecraftcore.gthandler.LCMaterials;
 import litecraftcore.gthandler.ModNameValues;
+import litecraftcore.items.LCMetaItems;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 
 public class OreDictLoader {
     public static void init(){
+
+        OreDictUnifier.registerOre(new ItemStack(LCBlocks.construction_alloy_bars), "barsConstructionAlloy");
+        OreDictUnifier.registerOre(new ItemStack(LCBlocks.stainless_steel_bars), "barsStainlessSteel");
+        OreDictUnifier.registerOre(new ItemStack(LCBlocks.soularium_bars), "barsSoularium");
+        OreDictUnifier.registerOre(new ItemStack(LCBlocks.titanium_bars), "barsTitanium");
+
+        OreDictUnifier.registerOre(LCMetaItems.charged_certus_quartz_dust.getStackForm(), "dustChargedCertusQuartz");
+
+        if (Loader.isModLoaded(ModNameValues.EnderIO)){
+            OreDictUnifier.registerOre(ModHandler.getModItem(ModNameValues.EnderIO, "block_end_iron_bars", 1), "barsEndSteel");
+            OreDictUnifier.registerOre(ModHandler.getModItem(ModNameValues.EnderIO, "block_dark_iron_bars", 1), "barsDarkSteel");
+        }
+
         if(Loader.isModLoaded(ModNameValues.Avaritia)){
             OreDictUnifier.registerOre(ModHandler.getModItem(ModNameValues.Avaritia, "resource", 1, 2), OrePrefix.dustTiny, LCMaterials.CosmicNeutronium);
             OreDictUnifier.registerOre(ModHandler.getModItem(ModNameValues.Avaritia, "resource", 1, 3), OrePrefix.nugget, LCMaterials.CosmicNeutronium);

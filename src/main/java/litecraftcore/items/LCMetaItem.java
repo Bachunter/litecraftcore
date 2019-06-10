@@ -14,6 +14,7 @@ import gregtech.api.unification.stack.MaterialStack;
 import gregtech.common.items.MetaItems;
 import litecraftcore.gthandler.LCMaterials;
 import litecraftcore.gthandler.ModNameValues;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 

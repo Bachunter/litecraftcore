@@ -2,20 +2,34 @@ package litecraftcore.gthandler.recipes;
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
+import litecraftcore.blocks.LCBlocks;
 import litecraftcore.gthandler.LCMaterials;
 import litecraftcore.gthandler.ModNameValues;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 
 public class CraftingRecipeLoader {
 
     public static void init(){
+
+        ModHandler.addShapedRecipe("construction_alloy_bars", new ItemStack(LCBlocks.construction_alloy_bars, 8), " w ", "XXX", "XXX", 'X', new UnificationEntry(OrePrefix.stick, LCMaterials.ConstructionAlloy));
+        ModHandler.addShapedRecipe("soularium_bars"         , new ItemStack(LCBlocks.soularium_bars         , 8), " w ", "XXX", "XXX", 'X', new UnificationEntry(OrePrefix.stick, LCMaterials.Soularium));
+        ModHandler.addShapedRecipe("stainless_steel_bars"   , new ItemStack(LCBlocks.stainless_steel_bars   , 8), " w ", "XXX", "XXX", 'X', new UnificationEntry(OrePrefix.stick, Materials  .StainlessSteel));
+        ModHandler.addShapedRecipe("titanium_bars"          , new ItemStack(LCBlocks.titanium_bars          , 8), " w ", "XXX", "XXX", 'X', new UnificationEntry(OrePrefix.stick, Materials  .Titanium));
+
+
+
         if(Loader.isModLoaded(ModNameValues.EnderIO)) {
-            ModHandler.addShapelessRecipe("RedstoneAlloy", OreDictUnifier.get(OrePrefix.dust, LCMaterials.RedstoneAlloy, 3), "dustCopper", "dustSilicon", "dustRedstone");
+            ModHandler.addShapelessRecipe("RedstoneAlloy" , OreDictUnifier.get(OrePrefix.dust, LCMaterials.RedstoneAlloy , 3), "dustCopper", "dustSilicon", "dustRedstone");
             ModHandler.addShapelessRecipe("Conductiveiron", OreDictUnifier.get(OrePrefix.dust, LCMaterials.ConductiveIron, 4), "dustInvar", "dustInvar", "dustAlumite", "dustRedstone");
             ModHandler.addShapelessRecipe("EnergeticAlloy", OreDictUnifier.get(OrePrefix.dust, LCMaterials.EnergeticAlloy, 6), "dustGold", "dustGold", "dustGold", "dustManganese", "dustGlowstone", "dustRedstone");
-            ModHandler.addShapelessRecipe("PulsatingIron", OreDictUnifier.get(OrePrefix.dust, LCMaterials.PulsatingIron, 4), "dustIron", "dustChrome", "dustAlumite", "dustEnderPearl");
-            ModHandler.addShapelessRecipe("VibrantAlloy", OreDictUnifier.get(OrePrefix.dust, LCMaterials.VibrantAlloy, 4), "dustEnergeticAlloy", "dustEnergeticAlloy", "dustPlatinum", "dustEnderPearl");
+            ModHandler.addShapelessRecipe("PulsatingIron" , OreDictUnifier.get(OrePrefix.dust, LCMaterials.PulsatingIron , 4), "dustIron", "dustChrome", "dustAlumite", "dustEnderPearl");
+            ModHandler.addShapelessRecipe("VibrantAlloy"  , OreDictUnifier.get(OrePrefix.dust, LCMaterials.VibrantAlloy  , 4), "dustEnergeticAlloy", "dustEnergeticAlloy", "dustPlatinum", "dustEnderPearl");
 
             ModHandler.addShapelessRecipe("ConstructionAlloy", OreDictUnifier.get(OrePrefix.dust, LCMaterials.ConstructionAlloy, 9), "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustSilicon");
             ModHandler.addShapelessRecipe("DarkSteel", OreDictUnifier.get(OrePrefix.dust, LCMaterials.DarkSteel, 9), "dustSteel", "dustSteel", "dustBlackBronze", "dustSteel", "dustSteel", "dustBlackBronze", "dustSteel", "dustVanadium", "dustObsidian");

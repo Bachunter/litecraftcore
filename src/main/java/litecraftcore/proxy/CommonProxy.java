@@ -32,6 +32,7 @@ public class CommonProxy {
 
         GTLog.logger.info("Registering recipes for Litecraft Core...");
         LCMetaItems.registerRecipes();
+        LCBlocks.registerRecipes();
         MachineRecipeLoader.init();
         CraftingRecipeLoader.init();
     }

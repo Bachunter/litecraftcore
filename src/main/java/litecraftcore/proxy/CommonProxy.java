@@ -8,6 +8,9 @@ import litecraftcore.gthandler.recipes.LCMachineRemoveRecipes;
 import litecraftcore.gthandler.recipes.MachineRecipeLoader;
 import litecraftcore.gthandler.recipes.OreDictLoader;
 import litecraftcore.items.LCMetaItems;
+import litecraftcore.registry.RegisterBlocks;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,9 +36,8 @@ public class CommonProxy {
         CraftingRecipeLoader.init();
     }
 
-
     public void preInit(FMLPreInitializationEvent event){
-        LCBlocks.init();
+        RegisterBlocks.registerBlocks();
     }
 
     public void init(FMLInitializationEvent event) {}

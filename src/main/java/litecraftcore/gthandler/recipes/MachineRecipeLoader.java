@@ -16,6 +16,10 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 
+import java.util.Arrays;
+
+import static gregtech.api.unification.material.Materials.Barium;
+
 public class MachineRecipeLoader {
     public static void init() {
 
@@ -35,6 +39,18 @@ public class MachineRecipeLoader {
                 .chancedOutput(OreDictUnifier.get(OrePrefix.dustTiny, Materials.Coal), 2000)
                 .fluidOutputs(Materials.Oil.getFluid(80))
                 .buildAndRegister();
+
+        RecipeMaps.ELECTROLYZER_RECIPES.recipeBuilder()
+                .duration(600).EUt(1920)
+                .input(OrePrefix.dust, LCMaterials.Benitoite, 14)
+                .outputs(
+                        OreDictUnifier.get(OrePrefix.dust, Materials.Barium),
+                        OreDictUnifier.get(OrePrefix.dust, Materials.Rutile),
+                        OreDictUnifier.get(OrePrefix.dust, Materials.Silicon, 3)
+                )
+                .fluidOutputs(Materials.Oxygen.getFluid(7000))
+                .buildAndRegister();
+
 
         RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
                 .duration(100).EUt(4)
@@ -67,11 +83,51 @@ public class MachineRecipeLoader {
                 .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.Lumium, 6))
                 .buildAndRegister();
 
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(900).EUt(480)
+                .input(OrePrefix.dust, Materials.VanadiumSteel, 6)
+                .input(OrePrefix.dust, Materials.BlackBronze, 2)
+                .input(OrePrefix.dust, Materials.Obsidian)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.DarkSteel, 9))
+                .buildAndRegister();
+
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(800).EUt(120)
+                .input(OrePrefix.dust, Materials.Steel, 7)
+                .input(OrePrefix.dust, Materials.Silicon)
+                .input(OrePrefix.dust, Materials.Vanadium)
+                .input(OrePrefix.dust, Materials.Neodymium)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.ElectricalSteel, 10))
+                .buildAndRegister();
+
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(600).EUt(1920)
+                .input(OrePrefix.dust, LCMaterials.DarkSteel)
+                .input(OrePrefix.dust, Materials.Titanium)
+                .input(OrePrefix.dust, Materials.Endstone)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.EndSteel, 3))
+                .buildAndRegister();
+
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(1200).EUt(480)
+                .input(OrePrefix.dust, Materials.Iron, 4)
+                .input(OrePrefix.dust, Materials.Gold)
+                .input(OrePrefix.dust, LCMaterials.SoulSand)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.Soularium, 3))
+                .buildAndRegister();
+
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(600).EUt(30720)
+                .input(OrePrefix.dust, LCMaterials.DarkSteel, 4)
+                .input(OrePrefix.dust, LCMaterials.Soularium)
+                .input(OrePrefix.dust, LCMaterials.PulsatingIron)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.DarkSoularium, 6))
+                .buildAndRegister();
 
         RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
                 .duration(100).EUt(4)
                 .inputs(ModHandler.getModItem("biomesoplenty", "flesh", 1))
-                .chancedOutput(new ItemStack(Items.ROTTEN_FLESH, 1), 1000)
+                .chancedOutput(OreDictUnifier.get(OrePrefix.dust, GAMaterials.Meat), 1000)
                 .buildAndRegister();
 
         if(Loader.isModLoaded(ModNameValues.SimplyJetpacks) && Loader.isModLoaded(ModNameValues.GregicAdditions)) {

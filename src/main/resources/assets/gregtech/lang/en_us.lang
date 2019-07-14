@@ -44,6 +44,15 @@ material.end_steel=End Steel
 material.soularium=Soularium
 material.construction_alloy=Construction Alloy
 
+#Extreme Reactors Materials
+material.benitoite=Benitoite
+material.anglesite=Anglesite
+
+#Advanced Rocketry materials
+material.dilithium=Dilithium
+material.titanium_aluminide=Titanium Aluminide
+material.titanium_iridium=Titanium Iridium Alloy
+
 #Alloys
 metaitem.heavy_duty_alloy_ingot_t1.name=Heavy Duty Alloy Ingot T1
 metaitem.heavy_duty_alloy_ingot_t2.name=Heavy Duty Alloy Ingot T2

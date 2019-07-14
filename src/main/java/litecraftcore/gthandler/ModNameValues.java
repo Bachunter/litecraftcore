@@ -7,6 +7,7 @@ public class ModNameValues {
     public static final String GalacticraftCore = "galacticraftcore";
     public static final String GalacticraftPlanets = "galacticraftplanets";
     public static final String EnderIO = "enderio";
+    public static final String ExtremeReactors = "bigreactors";
     public static final String PlusTiC = "plustic";
     public static final String ProjectRedCore = "projectred-core";
     public static final String SimplyJetpacks = "simplyjetpacks";

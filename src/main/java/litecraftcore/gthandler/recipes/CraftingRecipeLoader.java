@@ -32,10 +32,6 @@ public class CraftingRecipeLoader {
             ModHandler.addShapelessRecipe("VibrantAlloy"  , OreDictUnifier.get(OrePrefix.dust, LCMaterials.VibrantAlloy  , 4), "dustEnergeticAlloy", "dustEnergeticAlloy", "dustPlatinum", "dustEnderPearl");
 
             ModHandler.addShapelessRecipe("ConstructionAlloy", OreDictUnifier.get(OrePrefix.dust, LCMaterials.ConstructionAlloy, 9), "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustTinAlloy", "dustSilicon");
-            ModHandler.addShapelessRecipe("DarkSteel", OreDictUnifier.get(OrePrefix.dust, LCMaterials.DarkSteel, 9), "dustSteel", "dustSteel", "dustBlackBronze", "dustSteel", "dustSteel", "dustBlackBronze", "dustSteel", "dustVanadium", "dustObsidian");
-            ModHandler.addShapelessRecipe("ElectricalSteel", OreDictUnifier.get(OrePrefix.dust, LCMaterials.ElectricalSteel, 9), "dustSteel", "dustSteel", "dustSteel", "dustSteel", "dustSteel", "dustSteel", "dustSteel", "dustSilicon", "dustNeodymium");
-            ModHandler.addShapelessRecipe("EndSteel", OreDictUnifier.get(OrePrefix.dust, LCMaterials.EndSteel, 3), "dustEndstone", "dustObsidian", "dustDarkSteel");
-            ModHandler.addShapelessRecipe("Soularium", OreDictUnifier.get(OrePrefix.dust, LCMaterials.Soularium, 6), "dustIron", "dustIron", "dustIron", "dustIron", "dustGold", "dustSoulSand");
         }
 
         if (Loader.isModLoaded(ModNameValues.Tconstruct)) {
@@ -44,10 +40,6 @@ public class CraftingRecipeLoader {
 
         if (Loader.isModLoaded(ModNameValues.PlusTiC)) {
             ModHandler.addShapelessRecipe("Alubrass", OreDictUnifier.get(OrePrefix.dust, LCMaterials.AluminumBrass, 4), "dustAluminium", "dustAluminium", "dustAluminium", "dustCopper");
-        }
-
-        if(Loader.isModLoaded(ModNameValues.SimplyJetpacks)) {
-            ModHandler.addShapelessRecipe("DarkSoularium", OreDictUnifier.get(OrePrefix.dust, LCMaterials.DarkSoularium, 6), "dustDarkSteel", "dustDarkSteel", "dustDarkSteel", "dustDarkSteel", "dustSoularium", "dustPulsatingIron");
         }
     }
 

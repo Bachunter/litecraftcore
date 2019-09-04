@@ -1,6 +1,7 @@
 package litecraftcore;
 
 import litecraftcore.creativetabs.CreativeTab;
+import litecraftcore.gthandler.LCEnums;
 import litecraftcore.items.LCMetaItems;
 import litecraftcore.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,6 +31,10 @@ public class LitecraftCore {
     public static CommonProxy proxy;
 
     public static final CreativeTabs GENERIC_TAB = new CreativeTab("LitecraftCore");
+
+    public LitecraftCore(){
+        LCEnums.preInit();
+    }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

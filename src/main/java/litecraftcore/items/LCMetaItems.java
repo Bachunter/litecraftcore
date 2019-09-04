@@ -40,6 +40,16 @@ public class LCMetaItems {
 
     public static MetaItem<?>.MetaValueItem charged_certus_quartz_dust;
 
+    public static MetaItem<?>.MetaValueItem basic_circuit_chip;
+    public static MetaItem<?>.MetaValueItem advanced_circuit_chip;
+
+    public static MetaItem<?>.MetaValueItem printed_control_processor;
+    public static MetaItem<?>.MetaValueItem control_processor;
+    public static MetaItem<?>.MetaValueItem printed_item_processor;
+    public static MetaItem<?>.MetaValueItem item_processor;
+    public static MetaItem<?>.MetaValueItem redstone_matrix;
+
+
     public static void init() {
         LCMetaItem item = new LCMetaItem();
         item.setRegistryName("lc_meta_item");

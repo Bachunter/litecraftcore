@@ -2,6 +2,7 @@ package litecraftcore.gthandler.recipes;
 
 import gregicadditions.GAMaterials;
 import gregicadditions.recipes.GARecipeMaps;
+import gregtech.api.GTValues;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.OreDictUnifier;
@@ -10,15 +11,11 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import litecraftcore.gthandler.LCMaterials;
-import litecraftcore.gthandler.ModNameValues;
+import litecraftcore.gthandler.LCValues;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
-
-import java.util.Arrays;
-
-import static gregtech.api.unification.material.Materials.Barium;
 
 public class MachineRecipeLoader {
     public static void init() {
@@ -124,13 +121,28 @@ public class MachineRecipeLoader {
                 .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.DarkSoularium, 6))
                 .buildAndRegister();
 
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(600).EUt(1920)
+                .input(OrePrefix.dust, Materials.Titanium, 7)
+                .input(OrePrefix.dust, Materials.Aluminium, 3)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.TitaniumAluminide, 10))
+                .buildAndRegister();
+
+        RecipeMaps.MIXER_RECIPES.recipeBuilder()
+                .duration(600).EUt(1920)
+                .input(OrePrefix.dust, Materials.Titanium)
+                .input(OrePrefix.dust, Materials.Iridium)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.TitaniumIridium, 2))
+                .buildAndRegister();
+
         RecipeMaps.MACERATOR_RECIPES.recipeBuilder()
                 .duration(100).EUt(4)
                 .inputs(ModHandler.getModItem("biomesoplenty", "flesh", 1))
-                .chancedOutput(OreDictUnifier.get(OrePrefix.dust, GAMaterials.Meat), 1000)
+                .outputs(OreDictUnifier.get(OrePrefix.dust, GAMaterials.Meat, 2))
+                .chancedOutput(OreDictUnifier.get(OrePrefix.dust, GAMaterials.Meat), 9000)
                 .buildAndRegister();
 
-        if(Loader.isModLoaded(ModNameValues.SimplyJetpacks) && Loader.isModLoaded(ModNameValues.GregicAdditions)) {
+        if(GTValues.isModLoaded(LCValues.ModName.SimplyJetpacks)) {
             GARecipeMaps.ASSEMBLY_LINE_RECIPES.recipeBuilder()
                     .duration(600).EUt(30720)
                     .input(OrePrefix.plate, LCMaterials.DarkSoularium, 12)

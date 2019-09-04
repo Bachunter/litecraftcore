@@ -1,6 +1,7 @@
 package litecraftcore.gthandler;
 
 import gregtech.api.GTValues;
+import gregtech.api.unification.Element;
 import gregtech.api.unification.material.IMaterialHandler;
 import gregtech.api.unification.material.MaterialIconSet;
 import gregtech.api.unification.material.type.DustMaterial;
@@ -22,15 +23,14 @@ import static gregtech.api.unification.material.type.SolidMaterial.MatFlags.*;
 
 @IMaterialHandler.RegisterMaterialHandler
 public class LCMaterials {
-
     LCMaterials(){
-        if (Loader.isModLoaded(ModNameValues.GalacticraftPlanets)) {
+        if (GTValues.isModLoaded(LCValues.ModName.GalacticraftPlanets)) {
             gcMaterials();
         }
     }
 
     private static long CONSTRUCT_MATERIALS = GENERATE_PLATE | GENERATE_DENSE | GENERATE_BOLT_SCREW | GENERATE_ROD | GENERATE_LONG_ROD;
-    private static long WIRE_MATEIALS = GENERATE_PLATE | GENERATE_FINE_WIRE;
+    private static long WIRE_MATERIALS = GENERATE_PLATE | GENERATE_FINE_WIRE;
 
     /**
      * Vanilla Materials
@@ -51,7 +51,6 @@ public class LCMaterials {
     public static GemMaterial Electrotine = new GemMaterial(802, "electrotine", 0x0E73AA, MaterialIconSet.RUBY, 1, of(new MaterialStack(Calcium, 2), new MaterialStack(Magnesium, 5), new MaterialStack(Silicon, 8), new MaterialStack(Oxygen, 22), new MaterialStack(Hydrogen, 2), new MaterialStack(Oxygen, 2)), GENERATE_ORE | GENERATE_LENSE | NO_SMASHING | NO_SMELTING | HIGH_SIFTER_OUTPUT);
     public static IngotMaterial ElectrotineAlloy = new IngotMaterial(825, "electrotine_alloy", 0x6173AA, MaterialIconSet.DULL, 1, of(new MaterialStack(Iron, 1), new MaterialStack(Electrotine, 4)), GENERATE_PLATE);
 
-
     /**
      * Galacticraft Materials
      */
@@ -68,29 +67,29 @@ public class LCMaterials {
      * EnderIO Materials
      */
 
-    public static IngotMaterial RedstoneAlloy = new IngotMaterial(805, "redstone_alloy", 0xEB5050, MaterialIconSet.METALLIC, 0, of(new MaterialStack(Copper, 1), new MaterialStack(Silicon, 1), new MaterialStack(Redstone, 1)), WIRE_MATEIALS );
-    public static IngotMaterial ConductiveIron = new IngotMaterial(806, "conductive_iron", 0xDBB1AA, MaterialIconSet.DULL, 1, of(new MaterialStack(Invar, 2), new MaterialStack(Alumite, 1), new MaterialStack(Redstone, 1)), WIRE_MATEIALS);
-    public static IngotMaterial EnergeticAlloy = new IngotMaterial(807, "energetic_alloy", 0xFCAF38, MaterialIconSet.SHINY, 1, of(new MaterialStack(Gold, 3), new MaterialStack(Manganese, 1), new MaterialStack(Glowstone, 1), new MaterialStack(Redstone, 1)), WIRE_MATEIALS, null, 2000);
-    public static IngotMaterial PulsatingIron =  new IngotMaterial(808, "pulsating_iron", 0x749D7D, MaterialIconSet.METALLIC, 2, of(new MaterialStack(Iron, 1), new MaterialStack(Chrome, 1), new MaterialStack(Alumite, 1), new MaterialStack(EnderPearl, 1)), WIRE_MATEIALS, null, 3500);
-    public static IngotMaterial VibrantAlloy = new IngotMaterial(809, "vibrant_alloy", 0xBAC63F, MaterialIconSet.SHINY, 3, of(new MaterialStack(EnergeticAlloy, 2), new MaterialStack(Platinum, 1), new MaterialStack(EnderPearl, 1)), WIRE_MATEIALS, null, 4200);
+    public static IngotMaterial RedstoneAlloy = new IngotMaterial(805, "redstone_alloy", 0xEB5050, MaterialIconSet.METALLIC, 1, of(new MaterialStack(Copper, 1), new MaterialStack(Silicon, 1), new MaterialStack(Redstone, 1)), WIRE_MATERIALS);
+    public static IngotMaterial ConductiveIron = new IngotMaterial(806, "conductive_iron", 0xDBB1AA, MaterialIconSet.DULL, 2, of(new MaterialStack(Invar, 2), new MaterialStack(Alumite, 1), new MaterialStack(Redstone, 1)), WIRE_MATERIALS);
+    public static IngotMaterial EnergeticAlloy = new IngotMaterial(807, "energetic_alloy", 0xFCAF38, MaterialIconSet.SHINY, 3, of(new MaterialStack(Gold, 3), new MaterialStack(Manganese, 1), new MaterialStack(Glowstone, 1), new MaterialStack(Redstone, 1)), WIRE_MATERIALS, null, 2000);
+    public static IngotMaterial PulsatingIron =  new IngotMaterial(808, "pulsating_iron", 0x749D7D, MaterialIconSet.METALLIC, 3, of(new MaterialStack(Iron, 1), new MaterialStack(Chrome, 1), new MaterialStack(Alumite, 1), new MaterialStack(EnderPearl, 1)), WIRE_MATERIALS, null, 3500);
+    public static IngotMaterial VibrantAlloy = new IngotMaterial(809, "vibrant_alloy", 0xBAC63F, MaterialIconSet.SHINY, 5, of(new MaterialStack(EnergeticAlloy, 2), new MaterialStack(Platinum, 1), new MaterialStack(EnderPearl, 1)), WIRE_MATERIALS, null, 4200);
 
     public static IngotMaterial ConstructionAlloy = new IngotMaterial(810, "construction_alloy", 0x706E70, MaterialIconSet.DULL, 1, of(new MaterialStack(Silicon, 1), new MaterialStack(TinAlloy, 8)), DECOMPOSITION_BY_CENTRIFUGING | CONSTRUCT_MATERIALS, null, 6.0F, 3.0f, 512);
-    public static IngotMaterial DarkSteel = new IngotMaterial(811, "dark_steel", 0x2B2B2B, MaterialIconSet.DULL, 2, of(new MaterialStack(VanadiumSteel, 6), new MaterialStack(BlackBronze, 2), new MaterialStack(Obsidian,1)), CONSTRUCT_MATERIALS, null, 12.0F, 9.0f, 1024, 2000);
+    public static IngotMaterial DarkSteel = new IngotMaterial(811, "dark_steel", 0x2B2B2B, MaterialIconSet.DULL, 3, of(new MaterialStack(VanadiumSteel, 6), new MaterialStack(BlackBronze, 2), new MaterialStack(Obsidian,1)), CONSTRUCT_MATERIALS, null, 12.0F, 9.0f, 1024, 2000);
     public static IngotMaterial ElectricalSteel = new IngotMaterial(812, "electrical_steel", 0x7F7F7F, MaterialIconSet.SHINY, 2, of(new MaterialStack(Steel, 7), new MaterialStack(Silicon, 1), new MaterialStack(Vanadium, 1), new MaterialStack(Neodymium, 1)), CONSTRUCT_MATERIALS, null, 9.0F, 8.0f, 900, 2000);
-    public static IngotMaterial EndSteel = new IngotMaterial(813, "end_steel", 0xFCFDCA, MaterialIconSet.SHINY, 3, of(new MaterialStack(DarkSteel, 1), new MaterialStack(Titanium, 1), new MaterialStack(Endstone, 1)), CONSTRUCT_MATERIALS, null, 14.0F, 12.0f, 1536, 5000);
+    public static IngotMaterial EndSteel = new IngotMaterial(813, "end_steel", 0xFCFDCA, MaterialIconSet.SHINY, 4, of(new MaterialStack(DarkSteel, 1), new MaterialStack(Titanium, 1), new MaterialStack(Endstone, 1)), CONSTRUCT_MATERIALS, null, 14.0F, 12.0f, 1536, 5000);
     public static IngotMaterial Soularium = new IngotMaterial(814, "soularium", 0x6B5E4F, MaterialIconSet.DULL, 2, of(new MaterialStack(Iron, 4), new MaterialStack(Gold, 1), new MaterialStack(SoulSand, 1)), CONSTRUCT_MATERIALS, null,1000);
 
     /**
      * Simply Jetpacks Material
      */
-    public static IngotMaterial DarkSoularium = new IngotMaterial(815, "dark_soularium", 8221029, MaterialIconSet.DULL, 3, of(new MaterialStack(DarkSteel, 4), new MaterialStack(Soularium, 1), new MaterialStack(PulsatingIron, 1L)), CONSTRUCT_MATERIALS, null, 7000);
+    public static IngotMaterial DarkSoularium = new IngotMaterial(815, "dark_soularium", 8221029, MaterialIconSet.DULL, 6, of(new MaterialStack(DarkSteel, 4), new MaterialStack(Soularium, 1), new MaterialStack(PulsatingIron, 1L)), CONSTRUCT_MATERIALS, null, 7000);
 
 
     /**
      * Tinker's Materials
      */
 
-    public static IngotMaterial Ardite = new IngotMaterial(816, "ardite", 0xCD5117, MaterialIconSet.METALLIC, 2, of(new MaterialStack(Chrome, 3), new MaterialStack(Platinum, 1)), GENERATE_PLATE | GENERATE_ORE, null, 10.0F, 5.5f, 768,2000);
+    public static IngotMaterial Ardite = new IngotMaterial(816, "ardite", 0xCD5117, MaterialIconSet.METALLIC, 2, of(), GENERATE_PLATE | GENERATE_ORE, Element.valueOf("Ai"), 10.0F, 5.5f, 768,2000);
     public static IngotMaterial Manyullyn = new IngotMaterial(817, "manyullyn", 0xA97DE0, MaterialIconSet.DULL, 2, of(new MaterialStack(Cobalt, 1), new MaterialStack(Ardite, 1)), GENERATE_PLATE, null,  11.0F, 7.0F, 1024,3500);
     public static IngotMaterial AluminumBrass = new IngotMaterial(818, "alubrass", 0xF0D467, MaterialIconSet.DULL, 0, of(new MaterialStack(Aluminium, 3), new MaterialStack(Copper, 1)), GENERATE_PLATE);
     public static IngotMaterial Knightslime = new IngotMaterial(819, "knightslime", 0xD57DF4, MaterialIconSet.METALLIC, 1, of(), GENERATE_PLATE, null, 10.0F, 5F, 1024,3000);
@@ -100,16 +99,15 @@ public class LCMaterials {
      */
 
     public static IngotMaterial Signalum = new IngotMaterial(820, "signalum", 0xFF9118, MaterialIconSet.METALLIC, 2, of(new MaterialStack(Titanium, 12), new MaterialStack(Alumite, 4), new MaterialStack(Redstone, 4)), CONSTRUCT_MATERIALS, null, 12.0F, 12.0f, 1768,3500);
-    public static IngotMaterial Lumium = new IngotMaterial(821, "lumium", 0xE2E79A, MaterialIconSet.DULL, 1, of(new MaterialStack(Platinum, 4), new MaterialStack(Lanthanum, 1), new MaterialStack(Lutetium, 1)), WIRE_MATEIALS, null, 2000);
+    public static IngotMaterial Lumium = new IngotMaterial(821, "lumium", 0xE2E79A, MaterialIconSet.DULL, 1, of(new MaterialStack(Platinum, 4), new MaterialStack(Lanthanum, 1), new MaterialStack(Lutetium, 1)), WIRE_MATERIALS, null, 2000);
 
     /**
      * Avaritia Materials
      */
 
-    public static IngotMaterial CosmicNeutronium = new IngotMaterial(822, "cosmic_neutronium", 0x1C1C1C, MaterialIconSet.METALLIC, 5, of(), GENERATE_ORE | CONSTRUCT_MATERIALS, null, 20.0F, 20.0F, 3072, 9000);
-    public static IngotMaterial Infinity         = new IngotMaterial(823, "infinity",          0xFFF0EA, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | WIRE_MATEIALS,       null, 7200);
-    public static IngotMaterial InfinityCatalyst = new IngotMaterial(824, "infinity_catalyst", 0xFEEDC5, MaterialIconSet.METALLIC, 4, of(), GENERATE_ORE | WIRE_MATEIALS,       null, 8000);
-
+    public static IngotMaterial CosmicNeutronium = new IngotMaterial(822, "cosmic_neutronium", 0x1C1C1C, MaterialIconSet.METALLIC, 5, of(), GENERATE_ORE | CONSTRUCT_MATERIALS,  Element.valueOf("SpNt"), 20.0F, 20.0F, 3072, 9000);
+    public static IngotMaterial Infinity         = new IngotMaterial(823, "infinity",          0xFFF0EA, MaterialIconSet.METALLIC, 3, of(), GENERATE_ORE | WIRE_MATERIALS,       Element.valueOf("If")  , 7200);
+    public static IngotMaterial InfinityCatalyst = new IngotMaterial(824, "infinity_catalyst", 0xFEEDC5, MaterialIconSet.METALLIC, 4, of(), GENERATE_ORE | WIRE_MATERIALS,       Element.valueOf("SpIf"), 8000);
 
     /**
      * Extreme Reactors Material
@@ -122,9 +120,9 @@ public class LCMaterials {
      * Advanced Rocketry Materials
      */
 
-    public static GemMaterial Dilithium = new GemMaterial(828, "dilithium", 0xE6E6E6, MaterialIconSet.GEM_VERTICAL, 1, of(), GENERATE_PLATE);
-    public static IngotMaterial TitaniumAluminide = new IngotMaterial(829, "titanium_aluminide", 0x7C899D, MaterialIconSet.DULL, 4, of(new MaterialStack(Titanium, 7), new MaterialStack(Aluminium, 3)), GENERATE_BOLT_SCREW, null, 3000);
-    public static IngotMaterial TitaniumIridium = new IngotMaterial(830, "titanium_iridium", 0x989DA1, MaterialIconSet.DULL, 4, of(new MaterialStack(Titanium, 1), new MaterialStack(Iridium, 1)), GENERATE_BOLT_SCREW, null, 4200);
+    public static GemMaterial   Dilithium = new GemMaterial(828, "dilithium", 0xE6E6E6, MaterialIconSet.GEM_VERTICAL, 1, of(), GENERATE_PLATE);
+    public static IngotMaterial TitaniumAluminide = new IngotMaterial(829, "titanium_aluminide", 0x7C899D, MaterialIconSet.DULL, 4, of(new MaterialStack(Titanium, 7), new MaterialStack(Aluminium, 3)), GENERATE_BOLT_SCREW | GENERATE_PLATE, null, 3000);
+    public static IngotMaterial TitaniumIridium = new IngotMaterial(830, "titanium_iridium", 0x989DA1, MaterialIconSet.DULL, 4, of(new MaterialStack(Titanium, 1), new MaterialStack(Iridium, 1)), GENERATE_BOLT_SCREW | GENERATE_PLATE, null, 4200);
 
     static {
         RedstoneAlloy.setCableProperties(GTValues.V[ULV], 2, 0);
@@ -141,13 +139,13 @@ public class LCMaterials {
         Anglesite.setOreMultiplier(2);
         Benitoite.setOreMultiplier(2);
 
-        Electrotine.addOreByProducts(SiliconDioxide, Kyanite);
-        Ardite.addOreByProducts(Platinum, Lutetium);
+        Electrotine.addOreByProducts(Lapis, Kyanite);
+        Ardite.addOreByProducts(Lanthanum, Lanthanum);
+
 
         CosmicNeutronium.addOreByProducts(Ytterbium, Lutetium, Americium);
-        Infinity.addOreByProducts(Gadolinium, Platinum, Iridium);
-        InfinityCatalyst.addOreByProducts(Infinity, Promethium, Ytterbium);
-
+        Infinity.addOreByProducts(Europium, Platinum, Iridium);
+        InfinityCatalyst.addOreByProducts(Infinity, Americium, Ytterbium);
 
 
         OrePrefix.ingot.setIgnored(LCMaterials.RedstoneAlloy);
@@ -217,8 +215,7 @@ public class LCMaterials {
 
         OrePrefix.block.setIgnored(LCMaterials.Soularium);
 
-        if (Loader.isModLoaded(ModNameValues.GalacticraftPlanets)){
-
+        if (Loader.isModLoaded(LCValues.ModName.GalacticraftPlanets)){
             MeteoricIron.addOreByProducts(Iron, Nickel);
             Desh.addOreByProducts(Lanthanum, Rutile);
 

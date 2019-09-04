@@ -15,7 +15,6 @@ import java.util.List;
 public class BarsPane extends BlockPane {
     protected BarsPane(String name, float hardness, float resistance) {
         super(Material.IRON, true);
-
         setUnlocalizedName(name);
         setRegistryName(name);
         setHardness(hardness);

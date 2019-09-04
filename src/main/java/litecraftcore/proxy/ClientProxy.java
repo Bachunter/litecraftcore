@@ -1,6 +1,5 @@
 package litecraftcore.proxy;
 
-import litecraftcore.blocks.LCBlocks;
 import litecraftcore.items.LCMetaItems;
 import litecraftcore.registry.RegisterBlocks;
 import net.minecraft.item.Item;

@@ -3,6 +3,11 @@ material.infinity=Infinity
 material.infinity_catalyst=Infinity Catalyst
 material.cosmic_neutronium=Cosmic Neutronium
 
+#Advanced Rocketry materials
+material.dilithium=Dilithium
+material.titanium_aluminide=Titanium Aluminide
+material.titanium_iridium=Titanium Iridium Alloy
+
 #Simply Jetpacks 2 Material
 material.dark_soularium=Dark Soularium
 
@@ -48,11 +53,6 @@ material.construction_alloy=Construction Alloy
 material.benitoite=Benitoite
 material.anglesite=Anglesite
 
-#Advanced Rocketry materials
-material.dilithium=Dilithium
-material.titanium_aluminide=Titanium Aluminide
-material.titanium_iridium=Titanium Iridium Alloy
-
 #Alloys
 metaitem.heavy_duty_alloy_ingot_t1.name=Heavy Duty Alloy Ingot T1
 metaitem.heavy_duty_alloy_ingot_t2.name=Heavy Duty Alloy Ingot T2
@@ -74,12 +74,18 @@ metaitem.core_printed_spatial_storage_component.name=Printed Core Spatial Storag
 
 #Processors
 metaitem.processor_fluid_printed.name=Printed Fluid Processor
+metaitem.printed_control_processor.name=Printed Control Processor
+metaitem.printed_item_processor.name=Printed Item Processor
 metaitem.processor_fluid.name=Fluid Processor
+metaitem.control_processor.name=Control Processor
+metaitem.item_processor.name=Item Processor
 
 #Circuits
 metaitem.ae_circuit.name=Applied Energistics Circuit
 metaitem.adv_ae_circuit.name=Advanced Applied Energistics Circuit
 metaitem.fluid_circuit.name=Fluid Circuit
+metaitem.basic_circuit_chip.name=Basic Circuit Chip
+metaitem.advanced_circuit_chip.name=Advanced Circuit Chip
 
 #Bars
 tile.construction_alloy_bars.name=Construction Alloy Bars
@@ -92,3 +98,4 @@ metaitem.cover_interface.name=Interface
 metaitem.ae_wafer.name=Applied Energistics Wafer
 metaitem.ae_chip.name=Applied Energistics Chip
 metaitem.charged_certus_quartz_dust.name=Charged Certus Quartz Dust
+metaitem.redstone_matrix.name=Redstone Matrix

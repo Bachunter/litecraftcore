@@ -10,6 +10,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -22,18 +23,18 @@ public class LCMachineRemoveRecipes {
 
     public static void removeRecipe(RecipeMap map, ItemStack... itemInputs) {
         List<ItemStack> inputs = new ArrayList<>(Arrays.asList(itemInputs));
-        map.removeRecipe(map.findRecipe(2147483647L, inputs, new ArrayList<>()));
+        map.removeRecipe(map.findRecipe(Integer.MAX_VALUE, inputs, Collections.emptyList()));
     }
 
     public static void removeRecipe(RecipeMap map, FluidStack... fluidInputs) {
         List<FluidStack> inputs = new ArrayList<>(Arrays.asList(fluidInputs));
-        map.removeRecipe(map.findRecipe(2147483647L, new ArrayList<>(), inputs));
+        map.removeRecipe(map.findRecipe(Integer.MAX_VALUE, Collections.emptyList(), inputs));
     }
 
     public static void removeRecipe(RecipeMap map, ItemStack[] itemInputs, FluidStack[] fluidInputs) {
         List<ItemStack> itemIn = new ArrayList<>(Arrays.asList(itemInputs));
         List<FluidStack> fluidIn = new ArrayList<>(Arrays.asList(fluidInputs));
-        map.removeRecipe(map.findRecipe(2147483647L, itemIn, fluidIn));
+        map.removeRecipe(map.findRecipe(Integer.MAX_VALUE, itemIn, fluidIn));
     }
 
     @SuppressWarnings("unchecked")

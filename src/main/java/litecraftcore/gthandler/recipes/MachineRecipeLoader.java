@@ -65,9 +65,9 @@ public class MachineRecipeLoader {
 
         RecipeMaps.MIXER_RECIPES.recipeBuilder()
                 .duration(200).EUt(480)
-                .input(OrePrefix.dust, Materials.Iron, 9)
-                .inputs(new ItemStack(Items.SLIME_BALL, 2))
-                .inputs(new ItemStack(Items.ROTTEN_FLESH, 2))
+                .input(OrePrefix.dust, LCMaterials.DarkSteel, 8)
+                .inputs(new ItemStack(Items.SLIME_BALL, 16))
+                .inputs(new ItemStack(Items.ROTTEN_FLESH, 4))
                 .input(OrePrefix.dust, Materials.Ash)
                 .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.Knightslime, 10))
                 .buildAndRegister();
@@ -110,7 +110,7 @@ public class MachineRecipeLoader {
                 .input(OrePrefix.dust, Materials.Iron, 4)
                 .input(OrePrefix.dust, Materials.Gold)
                 .input(OrePrefix.dust, LCMaterials.SoulSand)
-                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.Soularium, 3))
+                .outputs(OreDictUnifier.get(OrePrefix.dust, LCMaterials.Soularium, 6))
                 .buildAndRegister();
 
         RecipeMaps.MIXER_RECIPES.recipeBuilder()

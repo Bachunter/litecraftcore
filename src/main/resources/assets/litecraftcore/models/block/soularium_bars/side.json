@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "litecraftcore:blocks/soularium_bars",
-        "bars": "litecraftcore:blocks/soularium_bars",
-        "edge": "litecraftcore:blocks/soularium_bars"
+        "particle": "litecraftcore:blocks/bars/soularium_bars",
+        "bars": "litecraftcore:blocks/bars/soularium_bars",
+        "edge": "litecraftcore:blocks/bars/soularium_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

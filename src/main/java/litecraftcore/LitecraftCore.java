@@ -30,7 +30,8 @@ public class LitecraftCore {
 
     public static CommonProxy proxy;
 
-    public static final CreativeTabs GENERIC_TAB = new CreativeTab("LitecraftCore");
+    public static final CreativeTabs GENERAL_TAB = new CreativeTab("LitecraftCore");
+    public static final CreativeTabs LC_BLOCKS_TAB = new CreativeTab("LCBlocks");
 
     public LitecraftCore(){
         LCEnums.preInit();

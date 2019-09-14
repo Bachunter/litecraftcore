@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "litecraftcore:blocks/titanium_bars",
-        "bars": "litecraftcore:blocks/titanium_bars",
-        "edge": "litecraftcore:blocks/titanium_bars"
+        "particle": "litecraftcore:blocks/bars/titanium_bars",
+        "bars": "litecraftcore:blocks/bars/titanium_bars",
+        "edge": "litecraftcore:blocks/bars/titanium_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

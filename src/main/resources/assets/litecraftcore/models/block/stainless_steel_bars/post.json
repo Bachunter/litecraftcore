@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "litecraftcore:blocks/stainless_steel_bars",
-        "bars": "litecraftcore:blocks/stainless_steel_bars",
-        "edge": "litecraftcore:blocks/stainless_steel_bars"
+        "particle": "litecraftcore:blocks/bars/stainless_steel_bars",
+        "bars": "litecraftcore:blocks/bars/stainless_steel_bars",
+        "edge": "litecraftcore:blocks/bars/stainless_steel_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

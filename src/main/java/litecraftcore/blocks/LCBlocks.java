@@ -8,27 +8,60 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class LCBlocks {
 
     private static List<Block> LIST_BLOCKS = new ArrayList<>();
 
-    public static BarsPane construction_alloy_bars;
-    public static BarsPane soularium_bars;
-    public static BarsPane stainless_steel_bars;
-    public static BarsPane titanium_bars;
+    public static Block construction_alloy_bars = new BarsPane("construction_alloy_bars", 5.0F, 10F);
+    public static Block soularium_bars = new BarsPane("soularium_bars", 5.0F, 15F);
+    public static Block stainless_steel_bars = new BarsPane("stainless_steel_bars", 5.0F, 20F);
+    public static Block titanium_bars = new BarsPane("titanium_bars", 5.0F, 25F);
 
-    static {
-        LIST_BLOCKS.addAll(Arrays.asList(
-                construction_alloy_bars = new BarsPane("construction_alloy_bars", 5.0F, 10F),
-                soularium_bars = new BarsPane("soularium_bars", 5.0F, 15F),
-                stainless_steel_bars = new BarsPane("stainless_steel_bars", 5.0F, 20F),
-                titanium_bars = new BarsPane("titanium_bars", 5.0F, 25F)
-                )
-        );
+    public static Block sign1 = new DecorateBlock("sign1");
+    public static Block sign2 = new DecorateBlock("sign2");
+    public static Block sign3 = new DecorateBlock("sign3");
+    public static Block sign4 = new DecorateBlock("sign4");
+    public static Block sign5 = new DecorateBlock("sign5");
+    public static Block sign6 = new DecorateBlock("sign6");
+    public static Block sign7 = new DecorateBlock("sign7");
+    public static Block sign8 = new DecorateBlock("sign8");
+    public static Block sign9 = new DecorateBlock("sign9");
+    public static Block sign10 = new DecorateBlock("sign10");
+    public static Block sign11 = new DecorateBlock("sign11");
+    public static Block sign12 = new DecorateBlock("sign12");
+    public static Block sign13 = new DecorateBlock("sign13");
+    public static Block sign14 = new DecorateBlock("sign14");
+    public static Block sign15 = new DecorateBlock("sign15");
+    public static Block sign16 = new DecorateBlock("sign16");
+    public static Block sign17 = new DecorateBlock("sign17");
+    public static Block sign18 = new DecorateBlock("sign18");
+    public static Block sign19 = new DecorateBlock("sign19");
+    public static Block sign20 = new DecorateBlock("sign20");
+    public static Block sign21 = new DecorateBlock("sign21");
+    public static Block sign22 = new DecorateBlock("sign22");
+    public static Block sign23 = new DecorateBlock("sign23");
+    public static Block sign24 = new DecorateBlock("sign24");
+    public static Block sign25 = new DecorateBlock("sign25");
+    public static Block sign26 = new DecorateBlock("sign26");
+    public static Block sign27 = new DecorateBlock("sign27");
+    public static Block sign28 = new DecorateBlock("sign28");
+    public static Block sign29 = new DecorateBlock("sign29");
+    public static Block sign30 = new DecorateBlock("sign30");
+    public static Block sign31 = new DecorateBlock("sign31");
+    public static Block sign32 = new DecorateBlock("sign32");
+    public static Block sign33 = new DecorateBlock("sign33");
+    public static Block sign34 = new DecorateBlock("sign34");
+    public static Block sign35 = new DecorateBlock("sign35");
+    public static Block sign36 = new DecorateBlock("sign36");
+
+
+    static  {
+        LIST_BLOCKS.addAll(BarsPane.getBarsPaneList());
+        LIST_BLOCKS.addAll(DecorateBlock.getDecorateBlockList());
     }
+
 
     public static List<Block> getListBlocks(){
         return LIST_BLOCKS;

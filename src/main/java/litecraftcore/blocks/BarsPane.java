@@ -1,6 +1,7 @@
 package litecraftcore.blocks;
 
 import litecraftcore.LitecraftCore;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BarsPane extends BlockPane {
@@ -19,7 +21,15 @@ public class BarsPane extends BlockPane {
         setRegistryName(name);
         setHardness(hardness);
         setResistance(resistance);
-        setCreativeTab(LitecraftCore.GENERIC_TAB);
+        setCreativeTab(LitecraftCore.GENERAL_TAB);
+
+        BarsPaneList.add(this);
+    }
+
+    private static List<Block> BarsPaneList = new ArrayList<>();
+
+    public static List<Block> getBarsPaneList(){
+        return BarsPaneList;
     }
 
     @Override
@@ -28,4 +38,6 @@ public class BarsPane extends BlockPane {
         tooltip.add("Hardness: " + this.blockHardness + " Blast Resistance: " + this.blockResistance);
 
     }
+
+
 }

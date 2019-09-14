@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "litecraftcore:blocks/construction_alloy_bars",
-        "bars": "litecraftcore:blocks/construction_alloy_bars",
-        "edge": "litecraftcore:blocks/construction_alloy_bars"
+        "particle": "litecraftcore:blocks/bars/construction_alloy_bars",
+        "bars": "litecraftcore:blocks/bars/construction_alloy_bars",
+        "edge": "litecraftcore:blocks/bars/construction_alloy_bars"
     },
     "elements": [
          {   "from": [ 8, 0, 7 ],

@@ -11,6 +11,8 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.MaterialStack;
 import net.minecraftforge.fml.common.Loader;
 
+import java.util.function.Function;
+
 import static com.google.common.collect.ImmutableList.of;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -90,15 +92,15 @@ public class LCMaterials {
      */
 
     public static IngotMaterial Ardite = new IngotMaterial(816, "ardite", 0xCD5117, MaterialIconSet.METALLIC, 2, of(), GENERATE_PLATE | GENERATE_ORE, Element.valueOf("Ai"), 10.0F, 5.5f, 768,2000);
-    public static IngotMaterial Manyullyn = new IngotMaterial(817, "manyullyn", 0xA97DE0, MaterialIconSet.DULL, 2, of(new MaterialStack(Cobalt, 1), new MaterialStack(Ardite, 1)), GENERATE_PLATE, null,  11.0F, 7.0F, 1024,3500);
+    public static IngotMaterial Manyullyn = new IngotMaterial(817, "manyullyn", 0xA97DE0, MaterialIconSet.DULL, 4, of(new MaterialStack(Cobalt, 1), new MaterialStack(Ardite, 1)), GENERATE_PLATE, null,  11.0F, 7.0F, 1024,3500);
     public static IngotMaterial AluminumBrass = new IngotMaterial(818, "alubrass", 0xF0D467, MaterialIconSet.DULL, 0, of(new MaterialStack(Aluminium, 3), new MaterialStack(Copper, 1)), GENERATE_PLATE);
-    public static IngotMaterial Knightslime = new IngotMaterial(819, "knightslime", 0xD57DF4, MaterialIconSet.METALLIC, 1, of(), GENERATE_PLATE, null, 10.0F, 5F, 1024,3000);
+    public static IngotMaterial Knightslime = new IngotMaterial(819, "knightslime", 0xD57DF4, MaterialIconSet.METALLIC, 3, of(), GENERATE_PLATE, null, 10.0F, 5F, 1024,3000);
 
     /**
      * Thermal Foundation Materials
      */
 
-    public static IngotMaterial Signalum = new IngotMaterial(820, "signalum", 0xFF9118, MaterialIconSet.METALLIC, 2, of(new MaterialStack(Titanium, 12), new MaterialStack(Alumite, 4), new MaterialStack(Redstone, 4)), CONSTRUCT_MATERIALS, null, 12.0F, 12.0f, 1768,3500);
+    public static IngotMaterial Signalum = new IngotMaterial(820, "signalum", 0xFF9118, MaterialIconSet.METALLIC, 3, of(new MaterialStack(Titanium, 12), new MaterialStack(Alumite, 4), new MaterialStack(Redstone, 4)), CONSTRUCT_MATERIALS, null, 12.0F, 12.0f, 1768,3500);
     public static IngotMaterial Lumium = new IngotMaterial(821, "lumium", 0xE2E79A, MaterialIconSet.DULL, 1, of(new MaterialStack(Platinum, 4), new MaterialStack(Lanthanum, 1), new MaterialStack(Lutetium, 1)), WIRE_MATERIALS, null, 2000);
 
     /**
@@ -123,6 +125,40 @@ public class LCMaterials {
     public static GemMaterial   Dilithium = new GemMaterial(828, "dilithium", 0xE6E6E6, MaterialIconSet.GEM_VERTICAL, 1, of(), GENERATE_PLATE);
     public static IngotMaterial TitaniumAluminide = new IngotMaterial(829, "titanium_aluminide", 0x7C899D, MaterialIconSet.DULL, 4, of(new MaterialStack(Titanium, 7), new MaterialStack(Aluminium, 3)), GENERATE_BOLT_SCREW | GENERATE_PLATE, null, 3000);
     public static IngotMaterial TitaniumIridium = new IngotMaterial(830, "titanium_iridium", 0x989DA1, MaterialIconSet.DULL, 4, of(new MaterialStack(Titanium, 1), new MaterialStack(Iridium, 1)), GENERATE_BOLT_SCREW | GENERATE_PLATE, null, 4200);
+
+    /**
+     * Nuclear Craft Materials
+     */
+
+    public static GemMaterial Rhodochrosite = new GemMaterial(831, "rhodochrosite", 0xAD1E39, MaterialIconSet.RUBY, 1, of(new MaterialStack(Manganese, 1), new MaterialStack(Carbon, 1), new MaterialStack(Oxygen, 3)), 0);
+    public static GemMaterial BoronNitride = new GemMaterial(832, "boron_nitride", 0x597652, MaterialIconSet.RUBY, 1, of(new MaterialStack(Boron, 1), new MaterialStack(Nitrogen, 1)), 0);
+    public static GemMaterial Fluorite = new GemMaterial(833, "fluorite", 0x83AF8C, MaterialIconSet.RUBY, 1, of(new MaterialStack(Calcium, 1), new MaterialStack(Fluorine, 2)), 0);
+    public static GemMaterial Villiaumite = new GemMaterial(834, "villiaumite", 0xBB785E, MaterialIconSet.RUBY, 1, of(new MaterialStack(Sodium, 1), new MaterialStack(Fluorine, 1)), 0);
+    public static GemMaterial Carobbiite = new GemMaterial(835, "carobbiite", 0xA4B45C, MaterialIconSet.RUBY, 1, of(new MaterialStack(Potassium, 1), new MaterialStack(Fluorine, 1)),0);
+    public static GemMaterial BoronArsenide = new GemMaterial(836, "boron_arsenide", 0x8E8C79, MaterialIconSet.RUBY, 1, of(new MaterialStack(Boron, 1), new MaterialStack(Arsenic, 1)), 0);
+
+    public static IngotMaterial Zirconium = new IngotMaterial(837, "zirconium", 0xEEEFD7, MaterialIconSet.SAND, 1, of(), 0, Element.Zr, 2000);
+    public static IngotMaterial ThoriumOxide = new IngotMaterial(838, "thorium_oxide", 0x242424, MaterialIconSet.DULL, 0, of(new MaterialStack(Thorium, 1), new MaterialStack(Oxygen, 1)), GENERATE_PLATE);
+    public static IngotMaterial UraniumOxide = new IngotMaterial(839, "uranium_oxide", 0x3C6B3C, MaterialIconSet.DULL, 0, of(new MaterialStack(Uranium, 1), new MaterialStack(Oxygen, 1)), GENERATE_PLATE);
+    public static IngotMaterial ManganeseOxide = new IngotMaterial(840, "manganese_oxide", 0x739073, MaterialIconSet.DULL, 0,of(new MaterialStack(Manganese, 1), new MaterialStack(Oxygen, 1)), GENERATE_PLATE);
+    public static IngotMaterial ManganeseDioxide = new IngotMaterial(841, "manganese_dioxide", 0x241E1B, MaterialIconSet.DULL, 0, of(new MaterialStack(Manganese, 1), new MaterialStack(Oxygen, 2)), GENERATE_PLATE);
+    public static IngotMaterial Ferroboron = new IngotMaterial(842, "ferroboron", 0x767676, MaterialIconSet.DULL, 1, of(new MaterialStack(Iron, 1), new MaterialStack(Boron, 1)), GENERATE_PLATE);
+    public static IngotMaterial Tough = new IngotMaterial(843, "tough", 0x171221, MaterialIconSet.DULL, 1, of(new MaterialStack(Ferroboron, 1), new MaterialStack(Lithium, 1)), GENERATE_PLATE);
+    public static IngotMaterial HardCarbon = new IngotMaterial(844, "hard_carbon", 0x307390, MaterialIconSet.SHINY, 3, of(new MaterialStack(Carbon, 2), new MaterialStack(Diamond, 1)), GENERATE_PLATE);
+    public static IngotMaterial MagnesiumDiboride = new IngotMaterial(845, "magnesium_diboride", 0x14110A, MaterialIconSet.DULL, 1, of(new MaterialStack(Magnesium, 1), new MaterialStack(Boron, 2)), GENERATE_PLATE);
+    public static IngotMaterial LithiumManganeseDioxide = new IngotMaterial(846, "lithium_manganese_dioxide", 0x696969, MaterialIconSet.DULL, 1, of(new MaterialStack(ManganeseDioxide, 1), new MaterialStack(Lithium, 1)), GENERATE_PLATE);
+    public static IngotMaterial Shibuichi = new IngotMaterial(847, "shibuichi", 0xB9B3AE, MaterialIconSet.DULL, 0, of(new MaterialStack(Copper, 3), new MaterialStack(Silver, 1)), GENERATE_PLATE);
+    public static IngotMaterial TinSilver = new IngotMaterial(848, "tin_silver", 0xF0F0FF, MaterialIconSet.DULL, 0, of(new MaterialStack(Tin, 3), new MaterialStack(Silver, 1)), GENERATE_PLATE);
+    public static IngotMaterial LeadPlatinum = new IngotMaterial(849, "lead_platinum", 0x537278, MaterialIconSet.DULL, 0, of(new MaterialStack(Lead, 3), new MaterialStack(Platinum, 1)), GENERATE_PLATE);
+    public static IngotMaterial Extreme = new IngotMaterial(850, "extreme", 0x712A3E, MaterialIconSet.DULL, 4, of(new MaterialStack(Tough, 1), new MaterialStack(HardCarbon, 1)), GENERATE_PLATE);
+    public static IngotMaterial Thermoconducting = new IngotMaterial(851, "thermoconducting", 0x65724F, MaterialIconSet.DULL, 3, of(new MaterialStack(Extreme, 1), new MaterialStack(BoronArsenide, 1)), GENERATE_PLATE);
+    public static IngotMaterial Zircaloy = new IngotMaterial(852, "zircaloy", 0xDADBDC, MaterialIconSet.DULL, 1, of(new MaterialStack(Zirconium, 7), new MaterialStack(Tin, 1)), GENERATE_PLATE);
+    public static IngotMaterial HSLASteel = new IngotMaterial(853, "hsla_steel", 0x8176AA, MaterialIconSet.SHINY, 3, of(new MaterialStack(Iron, 15), new MaterialStack(Manganese, 1), new MaterialStack(Carbon, 1)), CONSTRUCT_MATERIALS, null, 2500);
+
+    public static DustMaterial CalciumSulfate = new DustMaterial(854, "calcium_sulfate", 0xD1CAC2, MaterialIconSet.SAND, 0, of(new MaterialStack(Calcium, 1), new MaterialStack(Sulfur, 1), new MaterialStack(Oxygen, 4)), 0);
+    public static DustMaterial SodiumFluoride = new DustMaterial(855, "sodium_fluoride", 0xC3B19E, MaterialIconSet.SAND, 0, of(new MaterialStack(Sodium, 1), new MaterialStack(Fluorine, 1)), 0);
+    public static DustMaterial PotassiumHydroxide = new DustMaterial(856, "potassium_hydroxide", 0xCDD9C7, MaterialIconSet.SAND, 0, of(new MaterialStack(Potassium, 1), new MaterialStack(Oxygen, 1), new MaterialStack(Hydrogen, 1)), 0);
+    public static DustMaterial PotassiumFluoride = new DustMaterial(857, "potassium_fluoride", 0xD5DCB6, MaterialIconSet.SAND, 0, of(new MaterialStack(Potassium, 1), new MaterialStack(Fluorine, 1)), 0);
 
     static {
         RedstoneAlloy.setCableProperties(GTValues.V[ULV], 2, 0);

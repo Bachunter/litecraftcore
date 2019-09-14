@@ -53,6 +53,37 @@ material.construction_alloy=Construction Alloy
 material.benitoite=Benitoite
 material.anglesite=Anglesite
 
+#Nuclearcraft Materials
+material.rhodochrosite=Rhodochrosite
+material.boron_nitride=Cubic Boron Nitride
+material.fluorite=Fluorite
+material.villiaumite=Villiaumite
+material.carobbiite=Carobbiite
+material.boron_arsenide=BoronArsenide
+
+material.zirconium=Zirconium
+material.thorium_oxide=Thorium Oxide
+material.uranium_oxide=Uranium Oxide
+material.manganese_oxide=Manganese Oxide
+material.manganese_dioxide=Manganese Dioxide
+material.ferroboron=Ferroboron
+material.tough=Tough Alloy
+material.hard_carbon=Hard Carbon Alloy
+material.magnesium_diboride=Magnesium Diboride Alloy
+material.lithium_manganese_dioxide=Lithium Manganese Dioxide Alloy
+material.shibuichi=Shibuichi
+material.tin_silver=Tin Silver
+material.lead_platinum=Lead Platinum
+material.extreme=Extreme
+material.thermoconducting=Thermoconducting
+material.zircaloy=Zircaloy
+material.hsla_steel=HSLA Steel
+
+material.calcium_sulfate=Calcium Sulfate
+material.sodium_fluoride=Sodium Fluoride
+material.potassium_hydroxide=Potassium Hydroxide
+material.potassium_fluoride=Potassium Fluoride
+
 #Alloys
 metaitem.heavy_duty_alloy_ingot_t1.name=Heavy Duty Alloy Ingot T1
 metaitem.heavy_duty_alloy_ingot_t2.name=Heavy Duty Alloy Ingot T2
@@ -100,5 +131,44 @@ metaitem.ae_chip.name=Applied Energistics Chip
 metaitem.charged_certus_quartz_dust.name=Charged Certus Quartz Dust
 metaitem.redstone_matrix.name=Redstone Matrix
 
-itemGroup.LitecraftCore=Litecraft Core
+itemGroup.LitecraftCore=Litecraft Core General
+itemGroup.LCBlocks=Litecraft Core Blocks
 itemGroup.harvestcraft=Harvestcraft
+
+#Blocks
+tile.sign1.name=Alert sound sign
+tile.sign2.name=Rocket ground sign
+tile.sign3.name=Thaumic alert sign
+tile.sign4.name=Radiation sign
+tile.sign5.name=Dangerous leaks sign
+tile.sign6.name=Cavity sign
+tile.sign7.name=Cancer sign
+tile.sign8.name=Float sign
+tile.sign9.name=Fallen objects sign
+tile.sign10.name=Heart attack sign
+tile.sign11.name=Final heart attack sign
+tile.sign12.name=Inhalation  sign
+tile.sign13.name=Time reminder sign
+tile.sign14.name=Extreme cruelty sign
+tile.sign15.name=Chemical reaction sign
+tile.sign16.name=Liquid hydroxyl  sign
+tile.sign17.name=LV-tier sign
+tile.sign18.name=MV-tier sign
+tile.sign19.name=HV-tier sign
+tile.sign20.name=EV-tier sign
+tile.sign21.name=IV-tier sign
+tile.sign22.name=LuV-tier sign
+tile.sign23.name=Left light strips
+tile.sign24.name=Left heavy Strips
+tile.sign25.name=Right light strips
+tile.sign26.name=Right heavy Strips
+tile.sign27.name=Right arrow sign
+tile.sign28.name=Left arrow sign
+tile.sign29.name=Up arrow sign
+tile.sign30.name=Down arrow sign
+tile.sign31.name=Exit sign
+tile.sign32.name=Tbi LOX sign
+tile.sign33.name=Tbi pidr sign
+tile.sign34.name=Kitty sign
+tile.sign35.name=Laser CNC sign
+tile.sign36.name=Mystery dump sign

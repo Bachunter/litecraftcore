@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "litecraftcore:items/bars/stainless_steel_bars"
+    "layer0": "litecraftcore:blocks/bars/stainless_steel_bars"
   }
 }

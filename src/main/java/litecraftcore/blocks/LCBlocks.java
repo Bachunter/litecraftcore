@@ -56,6 +56,25 @@ public class LCBlocks {
     public static Block sign35 = new DecorateBlock("sign35");
     public static Block sign36 = new DecorateBlock("sign36");
 
+    public static Block tile_blue = new DecorateBlock("tile_blue");
+    public static Block tile_bone_mill = new DecorateBlock("tile_bone_mill");
+    public static Block tile_brown = new DecorateBlock("tile_brown");
+    public static Block tile_cyan = new DecorateBlock("tile_cyan");
+    public static Block tile_empty = new DecorateBlock("tile_empty");
+    public static Block tile_empty_random = new DecorateBlock("tile_empty_random");
+    public static Block tile_full_color = new DecorateBlock("tile_full_color");
+    public static Block tile_green = new DecorateBlock("tile_green");
+    public static Block tile_lapis = new DecorateBlock("tile_lapis");
+    public static Block tile_light_gray = new DecorateBlock("tile_light_gray");
+    public static Block tile_lime = new DecorateBlock("tile_lime");
+    public static Block tile_magenta = new DecorateBlock("tile_magenta");
+    public static Block tile_orange = new DecorateBlock("tile_orange");
+    public static Block tile_purple = new DecorateBlock("tile_purple");
+    public static Block tile_red = new DecorateBlock("tile_red");
+    public static Block tile_solid_steel = new DecorateBlock("tile_solid_steel");
+    public static Block tile_yellow = new DecorateBlock("tile_yellow");
+
+
 
     static  {
         LIST_BLOCKS.addAll(BarsPane.getBarsPaneList());

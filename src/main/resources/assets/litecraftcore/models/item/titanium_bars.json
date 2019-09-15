@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "litecraftcore:items/bars/titanium_bars"
+    "layer0": "litecraftcore:blocks/bars/titanium_bars"
   }
 }

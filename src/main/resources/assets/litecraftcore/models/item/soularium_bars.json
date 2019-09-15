@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "litecraftcore:items/bars/soularium_bars"
+    "layer0": "litecraftcore:blocks/bars/soularium_bars"
   }
 }

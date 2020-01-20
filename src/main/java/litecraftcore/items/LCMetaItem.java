@@ -17,6 +17,8 @@ import litecraftcore.gthandler.LCValues;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import java.util.Arrays;
+
 import static litecraftcore.items.LCMetaItems.*;
 
 public class LCMetaItem extends MaterialMetaItem {
@@ -75,36 +77,39 @@ public class LCMetaItem extends MaterialMetaItem {
     public void registerRecipes(){
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
                 .duration(200).EUt(480)
-                .inputs(LCMetaItems.core_printed_storage_component.getStackForm(), ModHandler.getModItem("appliedenergistics2", "material", 1, 20))
+                .inputs(LCMetaItems.core_printed_storage_component.getStackForm(),
+                        ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 20))
                 .fluidInputs(Materials.Redstone.getFluid(144))
                 .outputs(LCMetaItems.core_storage_component.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
                 .duration(200).EUt(480)
-                .inputs(LCMetaItems.core_printed_fluid_storage_component.getStackForm(), ModHandler.getModItem("appliedenergistics2", "material", 1, 20))
+                .inputs(LCMetaItems.core_printed_fluid_storage_component.getStackForm(),
+                        ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 20))
                 .fluidInputs(Materials.Redstone.getFluid(144))
                 .outputs(LCMetaItems.core_fluid_storage_component.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
                 .duration(200).EUt(480)
-                .inputs(LCMetaItems.core_printed_spatial_storage_component.getStackForm(), ModHandler.getModItem("appliedenergistics2", "material", 1, 20))
+                .inputs(LCMetaItems.core_printed_spatial_storage_component.getStackForm(),
+                        ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 20))
                 .fluidInputs(Materials.Redstone.getFluid(144))
                 .outputs(LCMetaItems.core_spatial_storage_component.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
-                .duration(200).EUt(480)
+                .duration(200).EUt(30)
                 .inputs(LCMetaItems.processor_fluid_printed.getStackForm(),
-                        ModHandler.getModItem("appliedenergistics2", "material", 1, 20),
+                        ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 20),
                         LCMetaItems.redstone_matrix.getStackForm())
                 .fluidInputs(Materials.RedAlloy.getFluid(144))
                 .outputs(LCMetaItems.processor_fluid.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
-                .duration(200).EUt(480)
+                .duration(200).EUt(30)
                 .inputs(LCMetaItems.printed_item_processor.getStackForm(),
                         ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 20),
                         LCMetaItems.redstone_matrix.getStackForm())
@@ -113,7 +118,7 @@ public class LCMetaItem extends MaterialMetaItem {
                 .buildAndRegister();
 
         RecipeMaps.ASSEMBLER_RECIPES.recipeBuilder()
-                .duration(200).EUt(480)
+                .duration(200).EUt(30)
                 .inputs(LCMetaItems.printed_control_processor.getStackForm(),
                         ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 20),
                         LCMetaItems.redstone_matrix.getStackForm())
@@ -147,7 +152,7 @@ public class LCMetaItem extends MaterialMetaItem {
                 .buildAndRegister();
 
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .duration(2000).EUt(4)
+                .duration(600).EUt(4)
                 .input(OrePrefix.dust, Materials.CertusQuartz)
                 .input(OrePrefix.dust, Materials.Redstone)
                 .fluidInputs(Materials.Water.getFluid(1000))
@@ -156,29 +161,29 @@ public class LCMetaItem extends MaterialMetaItem {
 
         RecipeMaps.FORMING_PRESS_RECIPES.recipeBuilder()
                 .duration(100).EUt(16)
-                .notConsumable(ModHandler.getModItem("appliedenergistics2", "material", 1, 14))
+                .notConsumable(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 14))
                 .input(OrePrefix.plate, Materials.Lapis)
                 .outputs(LCMetaItems.processor_fluid_printed.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.FORMING_PRESS_RECIPES.recipeBuilder()
                 .duration(100).EUt(16)
-                .notConsumable(ModHandler.getModItem("appliedenergistics2", "material", 1, 14))
+                .notConsumable(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 14))
                 .input(OrePrefix.plate, Materials.Emerald)
                 .outputs(LCMetaItems.core_printed_storage_component.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.FORMING_PRESS_RECIPES.recipeBuilder()
                 .duration(100).EUt(16)
-                .notConsumable(ModHandler.getModItem("appliedenergistics2", "material", 1, 14))
+                .notConsumable(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 14))
                 .inputs(new ItemStack(Items.PRISMARINE_CRYSTALS))
                 .outputs(LCMetaItems.core_printed_fluid_storage_component.getStackForm())
                 .buildAndRegister();
 
         RecipeMaps.FORMING_PRESS_RECIPES.recipeBuilder()
                 .duration(100).EUt(16)
-                .notConsumable(ModHandler.getModItem("appliedenergistics2", "material", 1, 14))
-                .inputs(ModHandler.getModItem("appliedenergistics2", "material", 1, 9))
+                .notConsumable(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 14))
+                .inputs(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 1, 9))
                 .outputs(LCMetaItems.core_printed_spatial_storage_component.getStackForm())
                 .buildAndRegister();
 
@@ -217,44 +222,41 @@ public class LCMetaItem extends MaterialMetaItem {
                 .outputs(LCMetaItems.redstone_matrix.getStackForm())
                 .buildAndRegister();
 
-        for (MaterialStack stack : solderingList) {
+        Arrays.stream(solderingList).forEach(stack -> {
             IngotMaterial material = (IngotMaterial) stack.material;
             int multiplier = (int) stack.amount;
-
             GARecipeMaps.CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                     .duration(200).EUt(480)
-                    .inputs(GAMetaItems.ADVANCED_BOARD.getStackForm(),
-                            ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 4, 23),
-                            ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 2, 24),
-                            ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 4, 22),
-                            LCMetaItems.AE_CHIP.getStackForm(4),
-                            OreDictUnifier.get(OrePrefix.wireFine, LCMaterials.EnergeticAlloy, 16))
+                    .inputs(GAMetaItems.ADVANCED_BOARD.getStackForm())
+                    .inputs(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 4, 22))
+                    .inputs(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 4, 23))
+                    .inputs(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 2, 24))
+                    .inputs(LCMetaItems.AE_CHIP.getStackForm(4))
+                    .input(OrePrefix.wireFine, LCMaterials.EnergeticAlloy, 16)
                     .fluidInputs(material.getFluid(72 * multiplier))
                     .outputs(LCMetaItems.AE_CIRCUIT.getStackForm())
                     .buildAndRegister();
-
             GARecipeMaps.CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                     .duration(400).EUt(1920)
-                    .inputs(GAMetaItems.EXTREME_BOARD.getStackForm(),
-                            ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 4, 23),
-                            OreDictUnifier.get(OrePrefix.circuit, MarkerMaterials.Tier.Extreme, 2),
-                            LCMetaItems.AE_CHIP.getStackForm(4),
-                            OreDictUnifier.get(OrePrefix.wireFine, LCMaterials.PulsatingIron, 16))
+                    .inputs(GAMetaItems.EXTREME_BOARD.getStackForm())
+                    .inputs(ModHandler.getModItem(LCValues.ModName.AppliedEnergistics, "material", 4, 23))
+                    .input(OrePrefix.circuit, MarkerMaterials.Tier.Extreme, 2)
+                    .inputs(LCMetaItems.AE_CHIP.getStackForm(4))
+                    .input(OrePrefix.wireFine, LCMaterials.PulsatingIron, 16)
                     .fluidInputs(material.getFluid(72 * multiplier))
                     .outputs(LCMetaItems.ADV_AE_CIRCUIT.getStackForm())
                     .buildAndRegister();
-
             GARecipeMaps.CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                     .duration(300).EUt(480)
-                    .inputs(GAMetaItems.EXTREME_BOARD.getStackForm(),
-                            LCMetaItems.processor_fluid.getStackForm(4),
-                            LCMetaItems.AE_CHIP.getStackForm(4),
-                            OreDictUnifier.get(OrePrefix.circuit, MarkerMaterials.Tier.Extreme, 1),
-                            OreDictUnifier.get(OrePrefix.wireFine, LCMaterials.ConductiveIron, 16))
+                    .inputs(GAMetaItems.EXTREME_BOARD.getStackForm())
+                    .inputs(LCMetaItems.processor_fluid.getStackForm(4))
+                    .inputs(LCMetaItems.AE_CHIP.getStackForm(4))
+                    .input(OrePrefix.circuit, MarkerMaterials.Tier.Extreme, 1)
+                    .input(OrePrefix.wireFine, LCMaterials.ConductiveIron, 16)
                     .fluidInputs(material.getFluid(72 * multiplier))
                     .outputs(LCMetaItems.FLUID_CIRCUIT.getStackForm(1))
                     .buildAndRegister();
-        }
+        });
 
     }
 }

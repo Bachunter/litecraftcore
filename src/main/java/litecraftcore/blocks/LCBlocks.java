@@ -12,7 +12,11 @@ import java.util.List;
 
 public class LCBlocks {
 
-    private static List<Block> LIST_BLOCKS = new ArrayList<>();
+    private LCBlocks(){}
+    /**
+     * Важно чтобы сначала объявлялись блоки, а потом уже собирались в общий список потому что айтемы в конструкторе
+     * класса добавляются в коллекцию и из неё уже потом попадают в LIST_BLOCKS
+     */
 
     public static Block construction_alloy_bars = new BarsPane("construction_alloy_bars", 5.0F, 10F);
     public static Block soularium_bars = new BarsPane("soularium_bars", 5.0F, 15F);
@@ -74,8 +78,11 @@ public class LCBlocks {
     public static Block tile_solid_steel = new DecorateBlock("tile_solid_steel");
     public static Block tile_yellow = new DecorateBlock("tile_yellow");
 
+    private static List<Block> LIST_BLOCKS = new ArrayList<>();
 
-
+    /**
+     * Здесь все коллеции собираются в одну общую коллекцию из которой уже объекты регистрируются
+     */
     static  {
         LIST_BLOCKS.addAll(BarsPane.getBarsPaneList());
         LIST_BLOCKS.addAll(DecorateBlock.getDecorateBlockList());

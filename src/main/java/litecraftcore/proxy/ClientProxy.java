@@ -1,7 +1,7 @@
 package litecraftcore.proxy;
 
 import litecraftcore.items.LCMetaItems;
-import litecraftcore.registry.RegisterBlocks;
+import litecraftcore.registry.Registry;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,7 +33,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         super.init(event);
-        RegisterBlocks.registerModels();
+        Registry.registerModels();
     }
 
     @Override

@@ -8,7 +8,6 @@ buildscript {
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
-//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
 version = "1.0"
@@ -30,8 +29,37 @@ minecraft {
     mappings = "snapshot_20171003"
 }
 
+repositories {
+    maven {
+        name = "ChickenBones maven"
+        url = "http://chickenbones.net/maven/"
+    }
+    maven {
+        name = "tterrag maven"
+        url = "http://maven.tterrag.com/"
+    }
+    maven {
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        name = "CraftTweaker Maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "Forestry Maven"
+        url = "http://maven.ic2.player.to"
+    }
+}
+
+
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+    deobfCompile "codechicken:CodeChickenLib:1.12.2-3.2.2.354:deobf"
+    deobfCompile "net.sengir.forestry:forestry_1.12.2:5.8.2.387"
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.8.9"
+    compile files("libs/gregtech-1.12.2-1.6.7.377.jar")
+    compile files("libs/GregicAdditions-1.12.2-1.4.2")
+    compile files("libs/rustic-1.0.15-deobf.jar")
 }
 
 processResources {

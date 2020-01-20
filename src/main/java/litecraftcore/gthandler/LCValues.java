@@ -11,6 +11,7 @@ public class LCValues {
                 EnderIO = "enderio",
                 ExtremeReactors = "bigreactors",
                 VulpesLibrary = "libvulpes",
+                Nuclearcraft = "nuclearcraft",
                 PlusTiC = "plustic",
                 ProjectRedCore = "projectred-core",
                 SimplyJetpacks = "simplyjetpacks",

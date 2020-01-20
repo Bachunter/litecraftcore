@@ -6,8 +6,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-public class LCMetaItems {
-    public LCMetaItems(){}
+public final class LCMetaItems {
 
     private static List<MetaItem<?>> ITEMS = MetaItem.getMetaItems();
 
@@ -56,27 +55,24 @@ public class LCMetaItems {
     }
 
     public static void registerOreDict() {
-        for (MetaItem<?> item : ITEMS)
-            if (item instanceof LCMetaItem)
-                ((LCMetaItem) item).registerOreDict();
+        ITEMS.stream()
+                .filter(item -> item instanceof LCMetaItem)
+                .forEach(item -> ((LCMetaItem) item).registerOreDict());
     }
 
     public static void registerRecipes() {
-        for (MetaItem<?> item : ITEMS)
-            if (item instanceof LCMetaItem)
-                ((LCMetaItem) item).registerRecipes();
+        ITEMS.stream()
+                .filter(item -> item instanceof LCMetaItem)
+                .forEach(item -> registerRecipes());
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerModels() {
-        for (MetaItem<?> item : ITEMS)
-            item.registerModels();
+        ITEMS.forEach(MetaItem::registerModels);
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerColors() {
-        for (MetaItem<?> item : ITEMS)
-            item.registerColor();
+        ITEMS.forEach(MetaItem::registerColor);
     }
-
 }

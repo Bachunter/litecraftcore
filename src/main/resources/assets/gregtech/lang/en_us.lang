@@ -124,6 +124,13 @@ tile.soularium_bars.name=Soularium Bars
 tile.stainless_steel_bars.name=Stainless Steel Bars
 tile.titanium_bars.name=Titanium Bars
 
+#Shears
+item.bronze_shears.name=Bronze Shears
+item.steel_shears.name=Steel Shears
+item.stainless_steel_shears.name=Stainless Steel Shears
+item.blue_steel_shears.name=Blue Steel Shears
+item.red_steel_shears.name=Red Steel Shears
+
 #Misc 
 metaitem.cover_interface.name=Interface
 metaitem.ae_wafer.name=Applied Energistics Wafer

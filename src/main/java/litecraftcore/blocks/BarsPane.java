@@ -10,12 +10,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BarsPane extends BlockPane {
-    protected BarsPane(String name, float hardness, float resistance) {
+    public BarsPane(String name, float hardness, float resistance) {
         super(Material.IRON, true);
         setUnlocalizedName(name);
         setRegistryName(name);
@@ -28,6 +29,7 @@ public class BarsPane extends BlockPane {
 
     private static List<Block> BarsPaneList = new ArrayList<>();
 
+    @Nonnull
     public static List<Block> getBarsPaneList(){
         return BarsPaneList;
     }
@@ -38,6 +40,4 @@ public class BarsPane extends BlockPane {
         tooltip.add("Hardness: " + this.blockHardness + " Blast Resistance: " + this.blockResistance);
 
     }
-
-
 }

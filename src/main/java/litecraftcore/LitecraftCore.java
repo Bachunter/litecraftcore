@@ -19,6 +19,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class LitecraftCore {
 
+    public LitecraftCore(){
+        LCEnums.preInit();
+    }
+
     public static final String MODID = "litecraftcore";
     public static final String NAME = "Litecraft Core";
     public static final String VERSION = "1.0";
@@ -33,9 +37,6 @@ public class LitecraftCore {
     public static final CreativeTabs GENERAL_TAB = new CreativeTab("LitecraftCore");
     public static final CreativeTabs LC_BLOCKS_TAB = new CreativeTab("LCBlocks");
 
-    public LitecraftCore(){
-        LCEnums.preInit();
-    }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

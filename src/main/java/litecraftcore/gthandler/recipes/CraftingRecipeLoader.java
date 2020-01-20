@@ -23,7 +23,7 @@ public class CraftingRecipeLoader {
         ModHandler.addShapedRecipe("stainless_steel_bars"   , new ItemStack(LCBlocks.stainless_steel_bars   , 8), " w ", "XXX", "XXX", 'X', new UnificationEntry(OrePrefix.stick, Materials  .StainlessSteel));
         ModHandler.addShapedRecipe("titanium_bars"          , new ItemStack(LCBlocks.titanium_bars          , 8), " w ", "XXX", "XXX", 'X', new UnificationEntry(OrePrefix.stick, Materials  .Titanium));
 
-        ModHandler.addShapedRecipe("cover_interface", new ItemStack(LCMetaItems.cover_interface.getMetaItem()),
+        ModHandler.addShapedRecipe("cover_interface", LCMetaItems.cover_interface.getStackForm(),
                 "PRP",
                 "GAB",
                 "PDP",
@@ -34,8 +34,7 @@ public class CraftingRecipeLoader {
                 'G', new UnificationEntry(OrePrefix.dye, MarkerMaterials.Color.Green),
                 'B', new UnificationEntry(OrePrefix.dye, MarkerMaterials.Color.Blue));
 
-
-
+        
         if(GTValues.isModLoaded(LCValues.ModName.EnderIO)) {
             ModHandler.addShapelessRecipe("RedstoneAlloy" , OreDictUnifier.get(OrePrefix.dust, LCMaterials.RedstoneAlloy , 3), "dustCopper", "dustSilicon", "dustRedstone");
             ModHandler.addShapelessRecipe("Conductiveiron", OreDictUnifier.get(OrePrefix.dust, LCMaterials.ConductiveIron, 4), "dustInvar", "dustInvar", "dustAlumite", "dustRedstone");

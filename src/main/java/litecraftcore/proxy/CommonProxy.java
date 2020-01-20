@@ -7,10 +7,9 @@ import litecraftcore.gthandler.recipes.CraftingRecipeLoader;
 import litecraftcore.gthandler.recipes.LCMachineRemoveRecipes;
 import litecraftcore.gthandler.recipes.MachineRecipeLoader;
 import litecraftcore.gthandler.recipes.OreDictLoader;
+import litecraftcore.items.LCItems;
 import litecraftcore.items.LCMetaItems;
-import litecraftcore.registry.RegisterBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import litecraftcore.registry.Registry;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -32,13 +31,17 @@ public class CommonProxy {
 
         GTLog.logger.info("Registering recipes for Litecraft Core...");
         LCMetaItems.registerRecipes();
+
+        LCItems.registerRecipes();
         LCBlocks.registerRecipes();
+
         MachineRecipeLoader.init();
         CraftingRecipeLoader.init();
     }
 
     public void preInit(FMLPreInitializationEvent event){
-        RegisterBlocks.registerBlocks();
+        Registry.registerBlocks();
+        Registry.registerItems();
     }
 
     public void init(FMLInitializationEvent event) {}

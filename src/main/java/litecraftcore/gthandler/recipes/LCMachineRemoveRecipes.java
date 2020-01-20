@@ -40,8 +40,6 @@ public class LCMachineRemoveRecipes {
     @SuppressWarnings("unchecked")
     public static void removeRecipesAll(RecipeMap map) {
         List<Recipe> recipes = new ArrayList<>(map.getRecipeList());
-        for(Recipe r: recipes) {
-            map.removeRecipe(r);
-        }
+        recipes.forEach(map::removeRecipe);
     }
 }
